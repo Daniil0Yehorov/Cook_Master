@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text=" ${title}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styleIndex.css}"/>
+</head>
+<body>
+
+<header>
+    <img src="/images/logo.png" alt="Logo">
+</header>
+
+<div class="container">
+    <div class="left-div">
+        <p class="left-div-title">Зустрічайте «Cook Master»</p>
+        <p class="left-div-text">Це єдиний сайт, де ви можете стати шеф-кухарем, не ризикуючи обпектися!
+            Тут ви знайдете "Кулінарний Квест" - гру, яка перевірить, чи зможете ви відрізнити булгур від кускуса та не перетворити кухню на поле битви. Кожен інгредієнт – це крок до перемоги. Виберіть правильні, і ви зможете приготувати шедевр, якщо ви не можете впоратися з рівнем, то ви ніколи не почуєте від Ектора, як він відправляє вас на балкон.
+            А якщо ви втомилися від ігор, загляньте в нашу "Енциклопедію Страви" - вона як Вікіпедія, тільки смачніша! Дізнайтеся, звідки насправді родом борщ та чому піца не завжди кругла.
+            "Cook Master" – де кулінарія зустрічається з історією, а ваші смакові рецептори вирушають у захоплюючу подорож!</p>
+    </div>
+
+    <div class="right-div">
+        <div class="right-div-form" id="login-form">
+            <form action="/login" method="post">
+                <input type="text" placeholder="Логін. Приклад: my_login123" name="login" required>
+                <input type="password" placeholder="Пароль. Приклад: Password123@" name="password" required>
+                <button type="submit">Авторизація</button>
+                <p class="form-link" onclick="switchForm()">Реєстрація</p>
+                <p th:if="${error}" style="background-color:red" th:text="${error}"/>
+            </form>
+        </div>
+
+        <div id="register-form" style="display:none" class="right-div-form">
+            <form  action="/registration" method="post">
+                <input type="text" placeholder="Логін. Приклад: my_login123" name="login" required>
+                <input type="password" placeholder="Пароль. Приклад: Password123@" name="password" required>
+                <input type="password" placeholder="Повторіть пароль" name="passwordCheck" required>
+                <button type="submit">Реєстрація</button>
+                <p class="form-link" onclick="switchForm()">Авторизація</p>
+                <p th:if="${error}" style="background-color:red" th:text="${error}"/>
+                <p th:if="${errorpassword}" style="background-color:red" th:text="${errorpassword}"/>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p class="footer-text">Виконавці проекту:</p>
+    <p class="footer-text-second">Андрій Гордієнко</p>
+    <p class="footer-text-second">Дар'я Дем'яненко</p>
+    <p class="footer-text-second">Даніїл Єгоров</p>
+    <p class="footer-text-second">Анастасія Жорняк</p>
+    <p class="footer-text-second">Аліна Стульбо</p>
+</footer>
+<script src="/js/index.js" type="text/javascript"></script>
+</body>
+</html>
