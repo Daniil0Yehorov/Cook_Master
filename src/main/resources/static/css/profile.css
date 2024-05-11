@@ -128,8 +128,8 @@
     }
     .change-section {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Вертикальное расположение элементов */
+        align-items: center; /* Выравниваем элементы по центру */
         box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
         background-color: #999999;
         border-radius: 30px;
@@ -289,8 +289,8 @@
     }
     .change-section {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Вертикальное расположение элементов */
+        align-items: center; /* Выравниваем элементы по центру */
         box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
         background-color: #999999;
         border-radius: 30px;
@@ -446,8 +446,8 @@
     }
     .change-section {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Вертикальное расположение элементов */
+        align-items: center; /* Выравниваем элементы по центру */
         box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
         background-color: #999999;
         border-radius: 30px;
@@ -607,9 +607,8 @@
     }
     .change-section {
         display: flex;
-        flex-direction: column;
-
-        align-items: center;
+        flex-direction: column; /* Вертикальное расположение элементов */
+        align-items: center; /* Выравниваем элементы по центру */
         box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
         background-color: #999999;
         border-radius: 30px;
@@ -772,8 +771,8 @@
     }
     .change-section {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Вертикальное расположение элементов */
+        align-items: center; /* Выравниваем элементы по центру */
         box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
         background-color: #999999;
         border-radius: 30px;
