@@ -1,6 +1,5 @@
 package com.CG.CookGame.Repositorys;
 
-import com.CG.CookGame.Models.User;
 import com.CG.CookGame.Models.UserDetails;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

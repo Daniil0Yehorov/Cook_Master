@@ -6,6 +6,7 @@
         font-family: "Kurale";
         background-color: #aec0eb;
     }
+
     header {
         height: 10vh;
         width: 100%;
@@ -27,53 +28,27 @@
         align-self: center;
         margin: 0 6%;
     }
-    .main {
-        height: 80vh;
-        margin-top: 10vh;
-        margin-bottom: 10vh;
+    .btn-group-vertical .btn {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20vw;
+        height: 10vh;
+        font-size: 1.5vw;
         display: flex;
-        font-size: 1.4em;
-    }
-    .block {
-        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    #rating {
-        height: 80vh;
-        width: 25%;
-        display: flex;
-        order: 1;
-    }
-
-    #text {
-        height: 80vh;
-        width: 50%;
-        display: flex;
-        order: 2;
-    }
-
-    #wiki {
-        height: 80vh;
-        width: 25%;
-        display: flex;
-        order: 3;
-    }
-    .rating-title, .text-title, .wiki-title {
-        margin: 0;
+    .buttontext {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2.2em;
         text-align: center;
-        margin-bottom: 1%;
-        font-family: "Kurale";
-        font-size: clamp(0.8em, 2vw, 1em);
     }
-    .rating-description, .text-description, .wiki-description {
-        margin: 0;
-        text-align: justify;
-        margin-left: 5%;
-        margin-right: 5%;
-        font-family: "Kurale";
-        font-size: clamp(0.8em, 2vw, 1em);
-    }
+
     footer {
         height: 10vh;
         position: fixed;
@@ -100,7 +75,7 @@
         font-size: clamp(0.8em, 1.5vw, 1.2em);
     }
 }
-@media (min-width: 1201px) and (max-width: 1400px) {
+@media (max-width: 1400px) {
     body {
         margin: 0;
         padding: 0;
@@ -128,51 +103,25 @@
         align-self: center;
         margin: 0 6%;
     }
-    .main {
-        height: 80vh;
-        margin-top: 10vh;
-        margin-bottom: 10vh;
+    .btn-group-vertical .btn {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20vw;
+        height: 10vh;
+        font-size: 1.5vw;
         display: flex;
-        font-size: 1em;
-    }
-    .block {
-        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    #rating {
-        height: 80vh;
-        width: 25%;
-        display: flex;
-        order: 1;
-    }
-
-    #text {
-        height: 80vh;
-        width: 50%;
-        display: flex;
-        order: 2;
-    }
-    #wiki {
-        height: 80vh;
-        width: 25%;
-        display: flex;
-        order: 3;
-    }
-    .rating-title, .text-title, .wiki-title {
-        margin: 0;
+    .buttontext {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2em;
         text-align: center;
-        margin-bottom: 1%;
-        font-family: "Kurale";
-        font-size: clamp(0.8em, 2vw, 1em);
-    }
-    .rating-description, .text-description, .wiki-description {
-        margin: 0;
-        text-align: justify;
-        margin-left: 5%;
-        margin-right: 5%;
-        font-family: "Kurale";
-        font-size: clamp(0.8em, 2vw, 1em);
     }
     footer {
         height: 10vh;
@@ -200,7 +149,7 @@
         font-size: clamp(0.8em, 1.5vw, 1.2em);
     }
 }
-@media (min-width: 769px) and (max-width: 1200px) {
+@media (max-width: 1200px) {
     body {
         margin: 0;
         padding: 0;
@@ -228,44 +177,24 @@
         align-self: center;
         margin: 0 6%;
     }
-    .main {
-        height: 80vh;
-        margin-top: 10vh;
-        margin-bottom: 10vh;
+    .btn-group-vertical .btn {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20vw;
+        height: 10vh;
+        font-size: 1.2em;
         display: flex;
-        flex-direction: column;
-        font-size: 1em;
-    }
-    .block {
-        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    #rating {
-        width: 100%;
-    }
-    #text {
-        width: 100%;
-    }
-    #wiki {
-        width: 100%;
-    }
-    .rating-title, .text-title, .wiki-title {
-        margin: 0;
-        text-align: center;
-        margin-bottom: 1%;
-        font-family: "Kurale";
-        margin-top: 5%;
-    }
-    .rating-description, .text-description, .wiki-description {
-        margin: 0;
-        text-align: justify;
-        margin-left: 5%;
-        margin-right: 5%;
-        font-family: "Kurale";
-    }
-    .rating-description {
-        margin-bottom: 15%;
+    .buttontext {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.6em;
         text-align: center;
     }
     footer {
@@ -294,13 +223,14 @@
         font-size: clamp(0.8em, 1.5vw, 1.2em);
     }
 }
-@media (min-width: 631px) and (max-width: 768px) {
+@media (max-width: 767px) {
     body {
         margin: 0;
         padding: 0;
         font-family: "Kurale";
         background-color: #aec0eb;
     }
+
     header {
         height: 10vh;
         width: 100%;
@@ -322,44 +252,24 @@
         align-self: center;
         margin: 0 6%;
     }
-    .main {
-        height: 80vh;
-        margin-top: 10vh;
-        margin-bottom: 10vh;
-        display: flex;
-        flex-direction: column;
+    .btn-group-vertical .btn {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20vw;
+        height: 10vh;
         font-size: 1em;
-    }
-    .block {
-        flex-direction: column;
+        display: flex;
         justify-content: center;
         align-items: center;
     }
-    #rating {
-        width: 100%;
-    }
-    #text {
-        width: 100%;
-    }
-    #wiki {
-        width: 100%;
-    }
-    .rating-title, .text-title, .wiki-title {
-        margin: 0;
-        text-align: center;
-        margin-bottom: 1%;
-        font-family: "Kurale";
-        margin-top: 5%;
-    }
-    .rating-description, .text-description, .wiki-description {
-        margin: 0;
-        text-align: justify;
-        margin-left: 5%;
-        margin-right: 5%;
-        font-family: "Kurale";
-    }
-    .rating-description {
-        margin-bottom: 15%;
+    .buttontext {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.2em;
         text-align: center;
     }
     footer {
@@ -412,48 +322,28 @@
         color: white;
         text-decoration: none;
         margin: 0 20px;
-        font-size: 0.8em;
+        font-size: 1em;
         align-self: center;
         margin: 0 6%;
     }
-    .main {
-        height: 80vh;
-        margin-top: 10vh;
-        margin-bottom: 10vh;
-        display: flex;
-        flex-direction: column;
+    .btn-group-vertical .btn {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20vw;
+        height: 10vh;
         font-size: 0.8em;
-    }
-    .block {
-        flex-direction: column;
+        display: flex;
         justify-content: center;
         align-items: center;
     }
-    #rating {
-        width: 100%;
-    }
-    #text {
-        width: 100%;
-    }
-    #wiki {
-        width: 100%;
-    }
-    .rating-title, .text-title, .wiki-title {
-        margin: 0;
-        text-align: center;
-        margin-bottom: 1%;
-        font-family: "Kurale";
-        margin-top: 5%;
-    }
-    .rating-description, .text-description, .wiki-description {
-        margin: 0;
-        text-align: justify;
-        margin-left: 5%;
-        margin-right: 5%;
-        font-family: "Kurale";
-    }
-    .rating-description {
-        margin-bottom: 15%;
+    .buttontext {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1em;
         text-align: center;
     }
     footer {

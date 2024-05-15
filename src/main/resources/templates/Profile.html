@@ -10,9 +10,11 @@
 <body>
 
 <header>
-  <a href="/logout" class="header-link">Вихід</a>
+  <a href="/logout" class="header-link">Вихід</a><!--Выход с акка-->
   <img src="/images/logo.png" alt="Logo">
+  <!--<a href="/epedia.html" class="header-link">Енциклопедія</a>-->
   <a href="/Main" class="header-link">Головная сторінка</a>
+ <!-- <a href="" class="header-link">Рейтинг</a>-->
 </header>
 
 <div class="info">
@@ -21,9 +23,10 @@
       <img class="userlogo" src="/images/userlogo.png" alt="Ваша аватарка">
     </div>
     <div class="userdata">
-      <p>Логін:  <span th:text="${user.login}"/></p>
-      <p>Пошта: <span th:text="${userDetails.ugmail}"/></p>
-      <p>Поточний рівень: <span th:text="${userDetails.level}"/></p>
+      <p>Логін:  <span th:text="${user.login}"/>
+      <p>Пошта: <span th:text="${userDetails.ugmail}"/>
+      <p>Останій пройдений рівень: <span th:text="${userDetails.level}"/>
+      <p>Бали: <span th:text="${userDetails.points}"/>
     </div>
   </div>
   <div class="maindiv">

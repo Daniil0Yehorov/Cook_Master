@@ -11,6 +11,7 @@ public class User {
     private String login;
     @Column(length=20,nullable = false)
     private String password;
+
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private UserDetails userDetails;
 

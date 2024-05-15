@@ -17,14 +17,18 @@ public class JsController {
 
     @GetMapping("/js/{jsName}")
     public ResponseEntity<byte[]> getJs(@PathVariable String jsName) {
+        // Путь к файлу JavaScript в ресурсах
         String jsPath = "static/js/" + jsName;
 
+        // Попытка загрузить файл JavaScript из ресурсов
         try {
             ClassPathResource resource = new ClassPathResource(jsPath);
             byte[] jsBytes = Files.readAllBytes(resource.getFile().toPath());
 
+            // Определение MIME типа для JavaScript файла
             String contentType = "text/javascript";
 
+            // Возврат ответа с JavaScript файлом
             return ResponseEntity.ok().contentType(MediaType.parseMediaType(contentType)).body(jsBytes);
         } catch (IOException e) {
             // Если файл JavaScript не найден, вернуть ошибку 404

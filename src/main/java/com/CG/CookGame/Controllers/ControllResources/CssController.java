@@ -16,11 +16,14 @@ public class CssController {
 
     @GetMapping("/css/{cssName}")
     public ResponseEntity<byte[]> getCss(@PathVariable String cssName) throws IOException {
+        // Загрузка CSS файла из ресурсов
         Path path = Paths.get("src/main/resources/static/css/" + cssName);
         byte[] cssBytes = Files.readAllBytes(path);
 
+        // Определение MIME типа для CSS файла
         String contentType = "text/css";
 
+        // Возврат ответа с CSS файлом
         return ResponseEntity.ok().contentType(MediaType.parseMediaType(contentType)).body(cssBytes);
     }
 }

@@ -4,6 +4,7 @@ import com.CG.CookGame.Models.User;
 import com.CG.CookGame.Models.UserDetails;
 import com.CG.CookGame.Repositorys.UserDetailsRepository;
 import com.CG.CookGame.Repositorys.UserRepository;
+import com.CG.CookGame.bean.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
