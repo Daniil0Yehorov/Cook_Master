@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cook Master</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/profile.css}"/>
+</head>
+<body>
+
+<header>
+  <a href="/logout" class="header-link">Вихід</a><!--Выход с акка-->
+  <img src="/images/logo.png" alt="Logo">
+  <!--<a href="/epedia.html" class="header-link">Енциклопедія</a>-->
+  <a href="/Main" class="header-link">Головная сторінка</a>
+ <!-- <a href="" class="header-link">Рейтинг</a>-->
+</header>
+
+<div class="info">
+  <div class="userprofile">
+    <div class="name">
+      <img class="userlogo" src="/images/userlogo.png" alt="Ваша аватарка">
+    </div>
+    <div class="userdata">
+      <p>Логін:  <span th:text="${user.login}"/>
+      <p>Пошта: <span th:text="${userDetails.ugmail}"/>
+      <p>Останій пройдений рівень: <span th:text="${userDetails.level}"/>
+      <p>Бали: <span th:text="${userDetails.points}"/>
+    </div>
+  </div>
+  <div class="maindiv">
+    <div class="changelogin">
+      <p class="logintxt">Зміна логіну</p>
+      <form class="change-section" action="/changeLogin" method="post">
+        <input type="text" placeholder="Новий логін" name="login" id="new-login">
+        <button type="submit">Замінити</button>
+        <p th:if="${errorlogin}" style="background-color:red" th:text="${errorlogin}"/>
+      </form>
+    </div>
+    <div class="changepassword">
+      <p class="passwordtxt">Зміна паролю</p>
+      <form class="change-section" action="/changePassword" method="post">
+        <input type="password" placeholder="Старий пароль"name="Oldpassword" id="old-password">
+        <input type="password" placeholder="Новий пароль"name="newpassword" id="new-password">
+        <button type="submit">Замінити</button>
+        <p th:if="${errorpassword}" style="background-color:red" th:text="${errorpassword}"/>
+      </form>
+    </div>
+    <div class="changeemail">
+      <p class="emailtxt">Зміна пошти</p>
+      <form class="change-section additional-class" action="/changeEmail" method="post">
+        <input type="email" placeholder="Нова пошта" name="gmail"id="new-email">
+        <button type="submit">Замінити</button>
+        <p th:if="${erroremail}" style="background-color:red" th:text="${erroremail}"/>
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p class="footer-text">Виконавці проекту:</p>
+  <p class="footer-text-second">Андрій Гордієнко</p>
+  <p class="footer-text-second">Дар'я Дем'яненко</p>
+  <p class="footer-text-second">Даніїл Єгоров</p>
+  <p class="footer-text-second">Анастасія Жорняк</p>
+  <p class="footer-text-second">Аліна Стульбо</p>
+</footer>
+</body>
+</html>

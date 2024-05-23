@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Kurale&display=swap');
+@media (min-width: 1401px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Kurale";
+        background-color: #aec0eb;
+    }
+    header {
+        height: 10vh;
+        width: 100%;
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+    }
+    .header-link {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2em;
+        align-self: center;
+    }
+    .main {
+        width: 60%;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        flex-direction: column;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: fixed;
+        padding: 35px;
+    }
+    footer {
+        height: 10vh;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+        color: #fff;
+    }
+    .footer-text {
+        text-align: center;
+        margin: 0;
+        font-size: clamp(0.8em, 1.5vw, 1.2em);
+        margin-top: 1.5vh;
+    }
+    .footer-text-second {
+        flex-grow: 1;
+        display: inline-block;
+        text-align: center;
+        margin: 30px;
+        font-size: 1.2em;
+        margin-top: 0.5vh;
+        font-size: clamp(0.8em, 1.5vw, 1.2em);
+    }
+}
+@media (min-width: 1201px) and (max-width: 1400px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Kurale";
+        background-color: #aec0eb;
+    }
+    header {
+        height: 10vh;
+        width: 100%;
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+    }
+    .header-link {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2em;
+        align-self: center;
+    }
+    .main {
+        width: 60%;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        flex-direction: column;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: fixed;
+        padding: 35px;
+    }
+    footer {
+        height: 10vh;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+        color: #fff;
+    }
+
+    .footer-text {
+        text-align: center;
+        margin: 0;
+        font-size: clamp(0.8em, 1.5vw, 1.2em);
+        margin-top: 1.5vh;
+    }
+    .footer-text-second {
+        flex-grow: 1;
+        display: inline-block;
+        text-align: center;
+        margin: 30px;
+        font-size: 1.2em;
+        margin-top: 0.5vh;
+        font-size: clamp(0.8em, 1.5vw, 1.2em);
+    }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Kurale";
+        background-color: #aec0eb;
+    }
+    header {
+        height: 10vh;
+        width: 100%;
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+    }
+    .header-link {
+        color: white;
+        text-decoration: none;
+        font-size: 1em;
+        align-self: center;
+    }
+    .main {
+        width: 60%;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        flex-direction: column;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: fixed;
+        padding: 35px;
+    }
+    footer {
+        height: 10vh;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+        color: #fff;
+    }
+    .footer-text {
+        text-align: center;
+        margin: 0;
+        font-size: clamp(0.8em, 1.5vw, 1.2em);
+        margin-top: 1.5vh;
+    }
+    .footer-text-second {
+        flex-grow: 1;
+        display: inline-block;
+        text-align: center;
+        margin: 10px;
+        font-size: 1.2em;
+        margin-top: 0.5vh;
+        font-size: clamp(0.8em, 1.5vw, 1.2em);
+    }
+}
+@media (min-width: 631px) and (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Kurale";
+        background-color: #aec0eb;
+    }
+    header {
+        height: 10vh;
+        width: 100%;
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+    }
+    .header-link {
+        color: white;
+        text-decoration: none;
+        font-size: 1em;
+        align-self: center;
+    }
+    .main {
+        width: 60%;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        flex-direction: column;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: fixed;
+        padding: 35px;
+    }
+    footer {
+        height: 10vh;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+        color: #fff;
+    }
+    .footer-text {
+        text-align: center;
+        margin: 0;
+        font-size: clamp(0.6em, 1.5vw, 0.8em);
+        margin-top: 0.5vh;
+    }
+    .footer-text-second {
+        flex-grow: 1;
+        display: inline-block;
+        text-align: center;
+        margin: 2px;
+        font-size: 1.2em;
+        margin-top: 0.5vh;
+        font-size: clamp(0.6em, 1.5vw, 0.8em);
+    }
+}
+@media (max-width: 630px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Kurale";
+        background-color: #aec0eb;
+    }
+    header {
+        height: 10vh;
+        width: 100%;
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+    }
+    .header-link {
+        color: white;
+        text-decoration: none;
+        font-size: 1em;
+        align-self: center;
+    }
+    .main {
+        width: 70%;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        flex-direction: column;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: fixed;
+        padding: 35px;
+    }
+    footer {
+        height: 10vh;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+        color: #fff;
+    }
+    .footer-text {
+        text-align: center;
+        margin: 0;
+        font-size: clamp(0.6em, 1.5vw, 0.8em);
+        margin-top: 0.5vh;
+    }
+    .footer-text-second {
+        flex-grow: 1;
+        display: inline-block;
+        text-align: center;
+        margin: 2px;
+        font-size: 1.2em;
+        margin-top: 0.5vh;
+        font-size: clamp(0.6em, 1.5vw, 0.8em);
+    }
+}
