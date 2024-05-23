@@ -13,8 +13,7 @@
     <a th:href="@{'/' + ${user.id} + '/' + ${user.login}}" class="header-link" th:text="${user.login}"/>
     <a href="/logout" class="header-link">Вихід</a>
     <img src="/images/logo.png" alt="Logo" th:src="@{/images/logo.png}">
-    <!--<a href="" class="header-link">Енциклопедія</a>-->
-    <!--<a href="" class="header-link">Рейтинг</a>-->
+    <a th:href="@{'/' + ${user.id} + '/encyclopedia'}" class="header-link">Енциклопедія</a>
     <a th:href="@{'/' + ${user.id}}" class="header-link">Головна сторінка</a>
 </header>
 <div class="container">
@@ -26,7 +25,7 @@
                     <a th:text="'Next Level: ' + ${nextLevel.id}" th:href="@{'/' + ${user.id} + '/Game/' + ${nextLevel.id}}" class="btn btn-primary">Level</a>
                 </div>
                 <div th:if="${nextLevel == null}">
-                     <p class="buttontext">На даний момент ви пройшли усі рівні, очікуйте оновлень</p>
+                    <p class="buttontext">На даний момент ви пройшли усі рівні, очікуйте оновлень</p>
                 </div>
             </div>
         </div>

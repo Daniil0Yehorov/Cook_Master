@@ -67,4 +67,10 @@ public class Level {
     public void setURLs(Set<UserReachedLevel> URLs) {
         this.URLs = URLs;
     }
+    public Long getDishId() {
+        if (dish != null) {
+            return dish.getId();
+        }
+        return null;
+    }
 }

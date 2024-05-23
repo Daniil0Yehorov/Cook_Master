@@ -92,7 +92,7 @@ public void ReachedTheLevel(Long Userid, Long lvlId){
       int currentUserLevel = userDetails.getLevel();
       if (currentUserLevel == maxLevel - 1) {
         // Перевіряємо, чи існує запис про досягнутий рівень користувача
-        UserReachedLevel userReachedLevel = userReachedLevelRepository.findByUserDetails(userDetails);
+        UserReachedLevel userReachedLevel = userReachedLevelRepository.findByUserDetailsUserId(userDetails.getUserId());
         if (userReachedLevel != null) {
           // Оновлюємо досягнутий рівень користувача
           userReachedLevel.setLevel(savedLevel);
