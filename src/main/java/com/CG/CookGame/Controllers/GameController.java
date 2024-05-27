@@ -115,7 +115,7 @@ public String goToGame(@PathVariable(value = "id") long id, Model model) {
                                 @RequestParam("dishName") String dishName,
                                 @RequestParam("productId") List<Long> productIds,
                                 @RequestParam("subsequence") List<Integer> subsequences,
-                                Model model) {
+                                RedirectAttributes redirectAttributes,Model model) {
         if (session.isPresent())
         {
 
@@ -141,16 +141,16 @@ public String goToGame(@PathVariable(value = "id") long id, Model model) {
 
                 // Перевірка відповіді
                 if (!userSubsequence.equals(expectedSubsequence) && (currentDish == null || !currentDish.getName().equals(dishName))) {
-                    model.addAttribute("error", "Помилка, ви ввели неправильну комбінацію і не вгадали назву страви.");
-                    return "/" + currentUser.getId() + "/Game/" + levelId;
+                    redirectAttributes.addFlashAttribute("error", "Помилка, ви ввели неправильну комбінацію і не вгадали назву страви.");
+                    return "redirect:/" + currentUser.getId() + "/Game/" + levelId;
                 }
                 else if (currentDish == null || !currentDish.getName().equals(dishName)) {
-                    model.addAttribute("error", "Помилка, ви не вгадали назву страви.");
-                    return "/" + currentUser.getId() + "/Game/" + levelId;
+                    redirectAttributes.addFlashAttribute("error", "Помилка, ви не вгадали назву страви.");
+                    return "redirect:/" + currentUser.getId() + "/Game/" + levelId;
                 }
                 else if (!userSubsequence.equals(expectedSubsequence) && (currentDish == null || !currentDish.getName().equals(dishName))) {
-                    model.addAttribute("error", "Помилка, ви ввели неправильну комбінацію і не вгадали назву страви.");
-                    return "/" + currentUser.getId() + "/Game/" + levelId;
+                    redirectAttributes.addFlashAttribute("error", "Помилка, ви ввели неправильну комбінацію і не вгадали назву страви.");
+                     return "redirect:/" + currentUser.getId() + "/Game/" + levelId;
                 }
             }
             if (currentUser != null)
