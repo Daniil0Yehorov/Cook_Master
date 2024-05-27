@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -110,12 +112,14 @@ public class GameController {
         }
         return "redirect:/";
     }
+    //Redirectatributes були додані, бо з моделлю не працює; Так як я через редірект залишаюсь на сторінці теж самій
+
     @PostMapping("/submitSequence")
     public String checkSequence(@RequestParam("levelId") Long levelId,
                                 @RequestParam("dishName") String dishName,
                                 @RequestParam("productId") List<Long> productIds,
                                 @RequestParam("subsequence") List<Integer> subsequences,
-                                Model model) {
+                                RedirectAttributes redirectAttributes,Model model) {
         if (session.isPresent())
         {
 
@@ -141,16 +145,16 @@ public class GameController {
 
                 // Перевірка відповіді
                 if (!userSubsequence.equals(expectedSubsequence) && (currentDish == null || !currentDish.getName().equals(dishName))) {
-                    model.addAttribute("error", "Помилка, ви ввели неправильну комбінацію і не вгадали назву страви.");
-                    return "/" + currentUser.getId() + "/Game/" + levelId;
+                    redirectAttributes.addFlashAttribute("error", "Помилка, ви ввели неправильну комбінацію і не вгадали назву страви.");
+                    return "redirect:/" + currentUser.getId() + "/Game/" + levelId;
                 }
                 else if (currentDish == null || !currentDish.getName().equals(dishName)) {
-                    model.addAttribute("error", "Помилка, ви не вгадали назву страви.");
-                    return "/" + currentUser.getId() + "/Game/" + levelId;
+                    redirectAttributes.addFlashAttribute("error", "Помилка, ви не вгадали назву страви.");
+                    return "redirect:/" + currentUser.getId() + "/Game/" + levelId;
                 }
                 else if (!userSubsequence.equals(expectedSubsequence) && (currentDish == null || !currentDish.getName().equals(dishName))) {
-                    model.addAttribute("error", "Помилка, ви ввели неправильну комбінацію і не вгадали назву страви.");
-                    return "/" + currentUser.getId() + "/Game/" + levelId;
+                    redirectAttributes.addFlashAttribute("error", "Помилка, ви ввели неправильну комбінацію і не вгадали назву страви.");
+                     return "redirect:/" + currentUser.getId() + "/Game/" + levelId;
                 }
             }
             if (currentUser != null)

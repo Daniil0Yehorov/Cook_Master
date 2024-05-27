@@ -36,19 +36,19 @@ public class ProfileController {
             User currentUser = session.getUser();
             // Перевірка валідності логіну
             if (!validationService.isLoginValid(login)) {
-                redirectAttributes.addFlashAttribute("errorlogin", "Invalid login");
+                redirectAttributes.addFlashAttribute("errorlogin", "Невалідний логін");
                 return "redirect:/" + currentUser.getId()+"/"+currentUser.getLogin();
             }
     
             // Перевірка що новий логін не співпадає з старим
             if (currentUser.getLogin().equals(login)) {
-                redirectAttributes.addFlashAttribute("errorlogin", "You cannot change to your current login");
+                redirectAttributes.addFlashAttribute("errorlogin", "Ваш новий пароль співпадає зі старим");
                 return "redirect:/" + currentUser.getId()+"/"+currentUser.getLogin();
             }
     
             // Перевірка унікальності нового логіну у бд
             if (!validationService.isLoginUnique(login)) {
-                redirectAttributes.addFlashAttribute("errorlogin", "Login already exists");
+                redirectAttributes.addFlashAttribute("errorlogin", "Логін вже існує");
                 return "redirect:/" + currentUser.getId()+"/"+currentUser.getLogin();
             }
 
@@ -65,12 +65,12 @@ public class ProfileController {
             User currentUser = session.getUser();
             // Перевірка валідності паролю
             if(!validationService.isValidPassword(newpassword)){
-                redirectAttributes.addFlashAttribute("errorpassword", "Invalid password");
+                redirectAttributes.addFlashAttribute("errorpassword", "Невалідний пароль");
                 return "redirect:/"+currentUser.getId()+"/"+currentUser.getLogin();
             }
             // Перевірка що новий пароль не співпадає зі старим
             if (Oldpassword.equals(newpassword)){
-                redirectAttributes.addFlashAttribute("errorpassword", "New password simillar to old");
+                redirectAttributes.addFlashAttribute("errorpassword", "Ваш новий пароль співпадає зі старим");
                 return "redirect:/"+ currentUser.getId()+"/"+currentUser.getLogin();
             }
             currentUser.setPassword(newpassword);
