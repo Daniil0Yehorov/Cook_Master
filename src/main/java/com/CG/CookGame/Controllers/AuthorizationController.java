@@ -69,7 +69,7 @@ public class AuthorizationController {
                 ,Mayonezii,Oseledez,Carrot,Buryak
         ));
         //Dishes
-        Dish buter = new Dish(1L,"Бутерброд ","Рецепт \n" +
+        Dish buter = new Dish(1L,"Бутерброд","Рецепт \n" +
                 "Візьміть шматок свіжого хліба. Намажте тонким слоєм вершкове масло. Наріжте ковбасу \n" +
                 "тонкими скибочками і викладіть на хліб. Бутерброд готовий до подачі! \n" +
                 "Історія \n" +
