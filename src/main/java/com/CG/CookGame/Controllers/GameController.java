@@ -73,7 +73,7 @@ public String goToGame(@PathVariable(value = "id") long id, Model model) {
             return "Game";
         }
     }
-    return "redirect:/error";}
+    return "redirect:/";}
     return "redirect:/";
 }
 
