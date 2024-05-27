@@ -33,17 +33,17 @@ public class ProfileController {
      if (session.isPresent()){
         User currentUser = session.getUser();
         if (!validationService.isLoginValid(login)) {
-            redirectAttributes.addFlashAttribute("errorlogin", "Invalid login");
+            redirectAttributes.addFlashAttribute("errorlogin", "Невалідний логін");
             return "redirect:/" + currentUser.getId()+"/"+currentUser.getLogin();
         }
 
         if (currentUser.getLogin().equals(login)) {
-            redirectAttributes.addFlashAttribute("errorlogin", "You cannot change to your current login");
+            redirectAttributes.addFlashAttribute("errorlogin", "Ваш новий пароль співпадає зі старим");
             return "redirect:/" + currentUser.getId()+"/"+currentUser.getLogin();
         }
 
         if (!validationService.isLoginUnique(login)) {
-            redirectAttributes.addFlashAttribute("errorlogin", "Login already exists");
+            redirectAttributes.addFlashAttribute("errorlogin", "Логін вже існує");
             return "redirect:/" + currentUser.getId()+"/"+currentUser.getLogin();
         }
         currentUser.setLogin(login);
@@ -57,11 +57,11 @@ public class ProfileController {
         if (session.isPresent()){
         User currentUser = session.getUser();
         if(!validationService.isValidPassword(newpassword)){
-            redirectAttributes.addFlashAttribute("errorpassword", "Invalid password");
+            redirectAttributes.addFlashAttribute("errorpassword", "Невалідний пароль");
             return "redirect:/"+currentUser.getId()+"/"+currentUser.getLogin();
         }
         if (Oldpassword.equals(newpassword)){
-            redirectAttributes.addFlashAttribute("errorpassword", "New password simillar to old");
+            redirectAttributes.addFlashAttribute("errorpassword", "Ваш новий пароль співпадає зі старим");
             return "redirect:/"+ currentUser.getId()+"/"+currentUser.getLogin();
         }
         currentUser.setPassword(newpassword);
@@ -75,15 +75,15 @@ public class ProfileController {
         User currentUser = session.getUser();
         UserDetails userDetails = currentUser.getUserDetails();
         if(!validationService.isValidEmail(gmail)){
-            redirectAttributes.addFlashAttribute("erroremail", "Invalid email");
+            redirectAttributes.addFlashAttribute("erroremail", "пошта ведена некоректно");
             return "redirect:/"+currentUser.getId()+"/"+currentUser.getLogin();
         }
         if(gmail.equals(userDetails.getUgmail())){
-            redirectAttributes.addFlashAttribute("erroremail", "Your email the same");
+            redirectAttributes.addFlashAttribute("erroremail", "Ви вели пошту, яка було до цього");
             return "redirect:/"+currentUser.getId()+"/"+currentUser.getLogin();
         }
         if (!validationService.isEmailUnique(gmail)) {
-            redirectAttributes.addFlashAttribute("erroremail", "Email is busy");
+            redirectAttributes.addFlashAttribute("erroremail", "Пошта занята іншим користувачем");
             return "redirect:/" + currentUser.getId()+"/"+currentUser.getLogin();
         }
         userDetails.setUgmail(gmail);
