@@ -116,52 +116,56 @@ public String goToGame(@PathVariable(value = "id") long id, Model model) {
                                 @RequestParam("productId") List<Long> productIds,
                                 @RequestParam("subsequence") List<Integer> subsequences,
                                 Model model) {
-    if (session.isPresent())
-    {
+        if (session.isPresent())
+        {
 
-        User currentUser = session.getUser();
-        Level currentLevel = levelService.getLevelById(levelId);
-        if (currentLevel == null) {return "redirect:/error";}
+            User currentUser = session.getUser();
+            Level currentLevel = levelService.getLevelById(levelId);
+            if (currentLevel == null) {return "redirect:/error";}
 
-        Dish currentDish = currentLevel.getDish();
-        if (currentDish == null || !currentDish.getName().equals(dishName)) {
-            model.addAttribute("error","Помилка, ви не вгадали назву страви");
-            return "/"+currentUser.getId()+"/Game/"+levelId;
-        }
+            Dish currentDish = currentLevel.getDish();
 
-        Map<Product, Integer> expectedSubsequences = levelService.getProductsAndSubsequencesByDish(currentDish);
+            Map<Product, Integer> expectedSubsequences = levelService.getProductsAndSubsequencesByDish(currentDish);
 
-        for (int i = 0; i < productIds.size(); i++) {
-            Long productId = productIds.get(i);
-            Integer userSubsequence = subsequences.get(i);
-            Optional<Product> productOptional = productRepository.findById(productId);
-            if (!productOptional.isPresent()) {
-                return "redirect:/error";
-            }
-            Product product = productOptional.get();
+            for (int i = 0; i < productIds.size(); i++) {
+                Long productId = productIds.get(i);
+                Integer userSubsequence = subsequences.get(i);
+                Optional<Product> productOptional = productRepository.findById(productId);
+                if (!productOptional.isPresent()) {
+                    return "redirect:/error";
+                }
+                Product product = productOptional.get();
 
-            // очікувана послідовність
-            Integer expectedSubsequence = expectedSubsequences.get(product);
+                // очікувана послідовність
+                Integer expectedSubsequence = expectedSubsequences.get(product);
 
-            // Перевірка потрібної і веденої послідовності
-            if (!userSubsequence.equals(expectedSubsequence)) {
-                model.addAttribute("error", "Помилка, ви не правильну комбінацію вели або назву стрви");
-                return "/"+currentUser.getId()+"/Game/"+levelId;
+                // Перевірка відповіді
+                if (!userSubsequence.equals(expectedSubsequence) && (currentDish == null || !currentDish.getName().equals(dishName))) {
+                    model.addAttribute("error", "Помилка, ви ввели неправильну комбінацію і не вгадали назву страви.");
+                    return "/" + currentUser.getId() + "/Game/" + levelId;
+                }
+                else if (currentDish == null || !currentDish.getName().equals(dishName)) {
+                    model.addAttribute("error", "Помилка, ви не вгадали назву страви.");
+                    return "/" + currentUser.getId() + "/Game/" + levelId;
+                }
+                else if (!userSubsequence.equals(expectedSubsequence) && (currentDish == null || !currentDish.getName().equals(dishName))) {
+                    model.addAttribute("error", "Помилка, ви ввели неправильну комбінацію і не вгадали назву страви.");
+                    return "/" + currentUser.getId() + "/Game/" + levelId;
                 }
             }
-        if (currentUser != null)
-        {
-            Optional<User> currentUserOptional = userService.findById(currentUser.getId());
-            Optional<UserDetails> currentUserDetailsOptional = userDetailsService.findById(currentUser.getId());
-            model.addAttribute("user", currentUserOptional.get());
-            model.addAttribute("userDetails", currentUserDetailsOptional.get());
-            List<Level> levels = levelService.getAllLevels();
-            model.addAttribute("levels", levels);
-            levelService.addScore(currentUser.getId(),currentLevel.getPointsPerLevel());
-            levelService.ReachedTheLevel(currentUser.getId(),currentLevel.getId());
-            return "redirect:/"+currentUserOptional.get().getId()+"/Game";
+            if (currentUser != null)
+            {
+                Optional<User> currentUserOptional = userService.findById(currentUser.getId());
+                Optional<UserDetails> currentUserDetailsOptional = userDetailsService.findById(currentUser.getId());
+                model.addAttribute("user", currentUserOptional.get());
+                model.addAttribute("userDetails", currentUserDetailsOptional.get());
+                List<Level> levels = levelService.getAllLevels();
+                model.addAttribute("levels", levels);
+                levelService.addScore(currentUser.getId(),currentLevel.getPointsPerLevel());
+                levelService.ReachedTheLevel(currentUser.getId(),currentLevel.getId());
+                return "redirect:/"+currentUserOptional.get().getId()+"/Game";
+            }
         }
-    }
         return "redirect:/";
     }
 
