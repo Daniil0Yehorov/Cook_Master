@@ -152,8 +152,8 @@ public class GameController {
                     redirectAttributes.addFlashAttribute("error", "Помилка, ви не вгадали назву страви.");
                     return "redirect:/" + currentUser.getId() + "/Game/" + levelId;
                 }
-                else if (!userSubsequence.equals(expectedSubsequence) && (currentDish == null || !currentDish.getName().equals(dishName))) {
-                    redirectAttributes.addFlashAttribute("error", "Помилка, ви ввели неправильну комбінацію і не вгадали назву страви.");
+                else if (!userSubsequence.equals(expectedSubsequence)) {
+                    redirectAttributes.addFlashAttribute("error", "Помилка, ви ввели неправильну комбінацію.");
                      return "redirect:/" + currentUser.getId() + "/Game/" + levelId;
                 }
             }
