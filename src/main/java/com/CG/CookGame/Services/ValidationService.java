@@ -59,7 +59,7 @@ public class ValidationService {
             return false;
         }
 
-        String regex="^[a-zA-Z0-9._-]{3,}$";
+        String regex="^[a-zA-Z0-9._-]{3,16}$";
 
         Pattern pattern = Pattern.compile(regex);
 
