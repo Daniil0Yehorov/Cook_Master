@@ -148,7 +148,7 @@ public String goToGame(@PathVariable(value = "id") long id, Model model) {
                     redirectAttributes.addFlashAttribute("error", "Помилка, ви не вгадали назву страви.");
                     return "redirect:/" + currentUser.getId() + "/Game/" + levelId;
                 }
-                else if (!userSubsequence.equals(expectedSubsequence) && (currentDish == null || !currentDish.getName().equals(dishName))) {
+                else if (!userSubsequence.equals(expectedSubsequence)) {
                     redirectAttributes.addFlashAttribute("error", "Помилка, ви ввели неправильну комбінацію і не вгадали назву страви.");
                      return "redirect:/" + currentUser.getId() + "/Game/" + levelId;
                 }
