@@ -11,6 +11,7 @@ public class UserDetails {
     private Long userId;
    @Column(columnDefinition = "int default 1")
     private int level;
+    @Column(length = 255,unique = true)
     private String Ugmail;
     @MapsId
     @OneToOne

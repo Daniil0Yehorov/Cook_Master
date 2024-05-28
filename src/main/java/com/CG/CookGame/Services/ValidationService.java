@@ -39,7 +39,7 @@ public class ValidationService {
             return false;
         }
 
-        String regex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
+        String regex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{3,255}$";
 
         Pattern pattern = Pattern.compile(regex);
 
@@ -59,7 +59,7 @@ public class ValidationService {
             return false;
         }
 
-        String regex="^[a-zA-Z0-9._-]{3,}$";
+        String regex="^[a-zA-Z0-9._-]{3,16}$";
 
         Pattern pattern = Pattern.compile(regex);
 
