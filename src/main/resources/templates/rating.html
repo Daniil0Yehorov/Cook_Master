@@ -13,7 +13,7 @@
     <a th:href="@{'/' + ${currentUser.userId} + '/' + ${currentUser.ugmail}}" class="header-link" th:text="${currentUser.ugmail}">Link Text</a>
     <a href="/logout" class="header-link">Вихід</a>
     <img src="/images/logo.png" alt="Logo" th:src="@{/images/logo.png}">
-    <a th:href="@{'/' + ${currentUser.userId} + '/Game'}" class="header-link">Повернутися до гри</a>
+    <a th:href="@{'/' + ${currentUser.userId} + '/Game'}" class="header-link">Головна сторінка</a>
     <a th:href="@{'/' + ${currentUser.userId} + '/encyclopedia'}" class="header-link">Енциклопедія</a>
 </header>
 <main class="block">
