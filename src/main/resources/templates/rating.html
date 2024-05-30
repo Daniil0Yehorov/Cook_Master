@@ -37,6 +37,28 @@
         </tr>
         </tbody>
     </table>
+    <!-- Секция для текущего пользователя, если он не в топ-5 -->
+    <div th:if="${currentUserPosition != null}">
+        <h2>Ваша позиція</h2>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">Місце</th>
+                <th scope="col">Логін користувача</th>
+                <th scope="col">Кількість балів</th>
+                <th scope="col">Кількість пройдених рівнів</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td th:text="${currentUserPosition}">7</td>
+                <td th:text="${currentUser.user.login}">example_login</td>
+                <td th:text="${currentUser.points}">0</td>
+                <td th:text="${currentUser.level}">1</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </main>
 <footer>
     <p class="footer-text">Виконавці проекту:</p>
