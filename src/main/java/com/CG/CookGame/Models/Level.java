@@ -41,7 +41,7 @@ public class Level {
     }
 
     public void setHint(String hint) {
-        Hint = hint;
+        this.Hint = hint;
     }
 
     public Dish getDish() {
@@ -57,7 +57,7 @@ public class Level {
     }
 
     public void setPointsPerLevel(int pointsPerLevel) {
-        PointsPerLevel = pointsPerLevel;
+        this.PointsPerLevel = pointsPerLevel;
     }
 
     public Set<UserReachedLevel> getURLs() {
