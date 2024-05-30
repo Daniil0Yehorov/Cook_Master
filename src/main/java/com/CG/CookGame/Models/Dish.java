@@ -46,7 +46,7 @@ public class Dish {
     }
 
     public void setDescr(String descr) {
-        Descr = descr;
+        this.Descr = descr;
     }
 
     public Set<DishHaveProducts> getDHPs() {
