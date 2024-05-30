@@ -235,15 +235,14 @@
         position: fixed;
         top: 0;
     }
-    img {
-        height: 60%;
-        margin: 0 20px;
+    header img {
+        display: none;
     }
     .header-link {
         color: white;
         text-decoration: none;
         margin: 0 20px;
-        font-size: 1em;
+        font-size: 1.2em;
         align-self: center;
     }
     .block {
@@ -344,9 +343,8 @@
         position: fixed;
         top: 0;
     }
-    img {
-        height: 40%;
-        margin: 0 20px;
+    header img {
+        display: none;
     }
     .header-link {
         color: white;
@@ -453,15 +451,14 @@
         position: fixed;
         top: 0;
     }
-    img {
-        height: 40%;
-        margin: 0 5px;
+    header img {
+        display: none;
     }
     .header-link {
         color: white;
         text-decoration: none;
         margin: 0 20px;
-        font-size: 1em;
+        font-size: 0.8em;
         align-self: center;
     }
     .block {

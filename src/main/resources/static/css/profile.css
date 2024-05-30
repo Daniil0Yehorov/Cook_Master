@@ -333,8 +333,8 @@
         position: fixed;
         top: 0;
     }
-    img {
-        height: 60%;
+    header img {
+        display: none;
     }
     .header-link {
         color: white;
@@ -494,8 +494,8 @@
         position: fixed;
         top: 0;
     }
-    img {
-        height: 40%;
+    header img {
+        display: none;
     }
     .header-link {
         color: white;
@@ -641,7 +641,7 @@
         margin-bottom: 15vh;
     }
 }
-@media (max-width: 630px) {
+@media (max-width: 631px) {
     body {
         margin: 0;
         padding: 0;
@@ -658,8 +658,8 @@
         position: fixed;
         top: 0;
     }
-    img {
-        height: 40%;
+    header img {
+        display: none;
     }
     .header-link {
         color: white;
