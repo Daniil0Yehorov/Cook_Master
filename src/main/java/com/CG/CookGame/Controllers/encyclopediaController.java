@@ -34,10 +34,10 @@ public class encyclopediaController {
         UserDetails userDetails = userDetailsRepository.findByUserId(userId);
         User user =session.getUser();
         if (userDetails == null) {
-            return "redirect:/login";
+            return "redirect:/";
         }
         if(user==null){
-            return "redirect:/login";
+            return "redirect:/";
         }
         model.addAttribute("userdetails", userDetails);
         model.addAttribute("user",user);
