@@ -34,10 +34,10 @@ public class encyclopediaController {
         UserDetails userDetails = userDetailsRepository.findByUserId(userId);
         User user =session.getUser();
         if (userDetails == null) {
-            return "redirect:/login";
+            return "redirect:/";
         }
         if(user==null){
-            return "redirect:/login";
+            return "redirect:/";
         }
         model.addAttribute("userdetails", userDetails);
         model.addAttribute("user",user);
@@ -47,7 +47,6 @@ public class encyclopediaController {
             return "encyclopedia";
         }
 
-        // Получаем ID максимального уровня, который пользователь предполагает пройти
         OptionalLong potentialMaxLevelId = userLevels.stream()
                 .mapToLong(userLevel -> userLevel.getLevel().getId())
                 .max();
@@ -56,10 +55,9 @@ public class encyclopediaController {
             return "encyclopedia";
         }
 
-        // Вычитаем 1, так как пользователь еще не прошел этот уровень
         long maxCompletedLevelId = potentialMaxLevelId.getAsLong() - 1;
 
-        // Теперь получаем все уровни, которые пользователь реально прошел
+
         List<Level> levels = levelRepository.findByIdLessThanEqual(maxCompletedLevelId);
         List<Long> dishIds = levels.stream()
                 .map(Level::getDishId)
