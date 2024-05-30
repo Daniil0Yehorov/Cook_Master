@@ -19,6 +19,7 @@
     }
     img {
         height: 80%;
+        margin: 0 20px;
     }
     .header-link {
         color: white;
@@ -26,7 +27,6 @@
         margin: 0 20px;
         font-size: 1.2em;
         align-self: center;
-        margin: 0 6%;
     }
     .btn-group-vertical .btn {
         position: fixed;
@@ -75,7 +75,7 @@
         font-size: clamp(0.8em, 1.5vw, 1.2em);
     }
 }
-@media (max-width: 1400px) {
+@media (min-width: 1201px) and (max-width: 1400px) {
     body {
         margin: 0;
         padding: 0;
@@ -94,6 +94,7 @@
     }
     img {
         height: 80%;
+        margin: 0 20px;
     }
     .header-link {
         color: white;
@@ -101,7 +102,6 @@
         margin: 0 20px;
         font-size: 1.2em;
         align-self: center;
-        margin: 0 6%;
     }
     .btn-group-vertical .btn {
         position: fixed;
@@ -149,7 +149,7 @@
         font-size: clamp(0.8em, 1.5vw, 1.2em);
     }
 }
-@media (max-width: 1200px) {
+@media (min-width: 769px) and (max-width: 1200px) {
     body {
         margin: 0;
         padding: 0;
@@ -166,16 +166,15 @@
         position: fixed;
         top: 0;
     }
-    img {
-        height: 60%;
+    header img {
+        display: none;
     }
     .header-link {
         color: white;
         text-decoration: none;
-        margin: 0 20px;
+        margin: 0 10px;
         font-size: 1.2em;
         align-self: center;
-        margin: 0 6%;
     }
     .btn-group-vertical .btn {
         position: fixed;
@@ -223,7 +222,7 @@
         font-size: clamp(0.8em, 1.5vw, 1.2em);
     }
 }
-@media (max-width: 767px) {
+@media (min-width: 631px) and (max-width: 768px) {
     body {
         margin: 0;
         padding: 0;
@@ -241,16 +240,15 @@
         position: fixed;
         top: 0;
     }
-    img {
-        height: 40%;
+    header img {
+        display: none;
     }
     .header-link {
         color: white;
         text-decoration: none;
-        margin: 0 20px;
-        font-size: 1.2em;
+        margin: 0 10px;
+        font-size: 1.1em;
         align-self: center;
-        margin: 0 6%;
     }
     .btn-group-vertical .btn {
         position: fixed;
@@ -298,7 +296,7 @@
         font-size: clamp(0.8em, 1.5vw, 1.2em);
     }
 }
-@media (max-width: 630px) {
+@media (max-width: 631px) {
     body {
         margin: 0;
         padding: 0;
@@ -315,16 +313,15 @@
         position: fixed;
         top: 0;
     }
-    img {
-        height: 40%;
+    header img {
+        display: none;
     }
     .header-link {
         color: white;
         text-decoration: none;
-        margin: 0 20px;
-        font-size: 1em;
+        margin: 0 10px;
+        font-size: 0.6em;
         align-self: center;
-        margin: 0 6%;
     }
     .btn-group-vertical .btn {
         position: fixed;

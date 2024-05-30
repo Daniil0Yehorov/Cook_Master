@@ -18,14 +18,14 @@
     }
     img {
         height: 80%;
+        margin: 0 20px;
     }
     .header-link {
         color: white;
         text-decoration: none;
-        margin: 0 20px;
+        margin: 0 15px;
         font-size: 1.2em;
         align-self: center;
-        margin: 0 6%;
     }
     .main {
         height: 80vh;
@@ -126,7 +126,6 @@
         margin: 0 20px;
         font-size: 1.2em;
         align-self: center;
-        margin: 0 6%;
     }
     .main {
         height: 80vh;
@@ -217,8 +216,8 @@
         position: fixed;
         top: 0;
     }
-    img {
-        height: 60%;
+    header img {
+        display: none;
     }
     .header-link {
         color: white;
@@ -226,7 +225,6 @@
         margin: 0 20px;
         font-size: 1.2em;
         align-self: center;
-        margin: 0 6%;
     }
     .main {
         height: 80vh;
@@ -311,16 +309,15 @@
         position: fixed;
         top: 0;
     }
-    img {
-        height: 40%;
+    header img {
+        display: none;
     }
     .header-link {
         color: white;
         text-decoration: none;
         margin: 0 20px;
-        font-size: 1.2em;
+        font-size: 1em;
         align-self: center;
-        margin: 0 6%;
     }
     .main {
         height: 80vh;
@@ -388,7 +385,7 @@
         font-size: clamp(0.8em, 1.5vw, 1.2em);
     }
 }
-@media (max-width: 630px) {
+@media (max-width: 631px) {
     body {
         margin: 0;
         padding: 0;
@@ -405,16 +402,15 @@
         position: fixed;
         top: 0;
     }
-    img {
-        height: 40%;
+    header img {
+        display: none;
     }
     .header-link {
         color: white;
         text-decoration: none;
-        margin: 0 20px;
-        font-size: 0.8em;
+        margin: 0 10px;
+        font-size: 0.6em;
         align-self: center;
-        margin: 0 6%;
     }
     .main {
         height: 80vh;

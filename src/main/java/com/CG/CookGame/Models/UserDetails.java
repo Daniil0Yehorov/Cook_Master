@@ -21,7 +21,7 @@ public class UserDetails {
     private Set<UserReachedLevel> URLs;
 
     @Column(columnDefinition = "int default 0")
-    private int Points;
+    private int points;
     public  UserDetails (){}
 
     public Set<UserReachedLevel> getURLs() {
@@ -41,11 +41,11 @@ public class UserDetails {
     }
 
     public int getPoints() {
-        return Points;
+        return points;
     }
 
     public void setPoints(int points) {
-        Points = points;
+        this.points = points;
     }
 
     public int getLevel() {

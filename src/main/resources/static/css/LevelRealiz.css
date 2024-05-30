@@ -169,8 +169,8 @@ input[type="number"]:hover {
         position: fixed;
         top: 0;
     }
-    img {
-        height: 60%;
+    header img {
+        display: none;
     }
     .header-link {
         color: white;
@@ -178,7 +178,6 @@ input[type="number"]:hover {
         margin: 0 20px;
         font-size: 1.2em;
         align-self: center;
-        margin: 0 6%;
     }
     footer {
         height: 10vh;
@@ -223,8 +222,8 @@ input[type="number"]:hover {
         position: fixed;
         top: 0;
     }
-    img {
-        height: 40%;
+    header img {
+        display: none;
     }
     .header-link {
         color: white;
@@ -232,7 +231,6 @@ input[type="number"]:hover {
         margin: 0 20px;
         font-size: 1.2em;
         align-self: center;
-        margin: 0 6%;
     }
     footer {
         height: 10vh;
@@ -277,16 +275,15 @@ input[type="number"]:hover {
         position: fixed;
         top: 0;
     }
-    img {
-        height: 40%;
+    header img {
+        display: none;
     }
     .header-link {
         color: white;
         text-decoration: none;
         margin: 0 20px;
-        font-size: 0.8em;
+        font-size: 1em;
         align-self: center;
-        margin: 0 6%;
     }
     .btn-primary {
         margin-bottom: 25%;
