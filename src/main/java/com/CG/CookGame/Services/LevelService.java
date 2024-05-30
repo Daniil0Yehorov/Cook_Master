@@ -81,7 +81,6 @@ public void ReachedTheLevel(Long Userid, Long lvlId){
 }
   // Під час додавання нового рівня оновлюватиметься таблиця UserReachedLevel юзерів, якщо
   // вони досягли максимального рівня до оновлення
-  //teesssstt
   public void SaveLevel(Level newLevel) {
     Level savedLevel = levelRepository.save(newLevel);
     // Отримаємо теперешній макс левел
