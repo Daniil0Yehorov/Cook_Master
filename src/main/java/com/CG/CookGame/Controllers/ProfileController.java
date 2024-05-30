@@ -53,8 +53,7 @@ public class ProfileController {
             }
 
             currentUser.setLogin(login);
-            //userService.save(currentUser);
-            userService.update(currentUser);//баг фикс 2
+            userService.update(currentUser);
 
         return "redirect:/" + currentUser.getId()+"/"+currentUser.getLogin();}
         return "redirect:/";
@@ -74,8 +73,7 @@ public class ProfileController {
                 return "redirect:/"+ currentUser.getId()+"/"+currentUser.getLogin();
             }
             currentUser.setPassword(newpassword);
-            //userService.save(currentUser);
-            userService.update(currentUser);//баг фикс 2
+            userService.update(currentUser);
         return "redirect:/" + currentUser.getId()+"/"+currentUser.getLogin();}
         return "redirect:/";
     }
@@ -102,8 +100,7 @@ public class ProfileController {
             return "redirect:/" + currentUser.getId()+"/"+currentUser.getLogin();
         }
         userDetails.setUgmail(gmail);
-        //userDetailsService.save(userDetails);
-        userDetailsService.update(userDetails);//баг фикс 2
+        userDetailsService.update(userDetails);
         return "redirect:/" + currentUser.getId()+"/"+currentUser.getLogin();}
         return "redirect:/";
     }
