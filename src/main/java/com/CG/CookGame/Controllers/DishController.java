@@ -33,7 +33,7 @@ public class DishController {
 
         User user = session.getUser();
         if (user == null) {
-            return "redirect:/login";
+            return "redirect:/";
         }
 
         model.addAttribute("user", user);
