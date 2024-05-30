@@ -61,7 +61,7 @@ public class UserDetails {
     }
 
     public void setUgmail(String ugmail) {
-        Ugmail = ugmail;
+        this.Ugmail = ugmail;
     }
 
     public User getUser() {
