@@ -17,12 +17,36 @@ public class Dish {
     private Set<DishHaveProducts> DHPs;
     @OneToMany(mappedBy="dish")
     private Set<Level> levels;
+    @Column(unique = false,length = 65535)
+    //@Column(nullable = false,unique = false,length = 65535)
+    private String wikySrc;
+    //@Column(nullable = false,unique = false,length = 65535)
+    @Column(unique = false,length = 65535)
+    private String imageSrc;
 
     public Dish(){}
-    public Dish(Long id,String name,String Descr){
+    public Dish(Long id,String name,String Descr,String wikySrc,String imageSrc){
         this.id=id;
         this.name=name;
         this.Descr=Descr;
+        this.wikySrc=wikySrc;
+        this.imageSrc=imageSrc;
+    }
+
+    public String getWikySrc() {
+        return wikySrc;
+    }
+
+    public void setWikySrc(String wikySrc) {
+        this.wikySrc = wikySrc;
+    }
+
+    public String getImageSrc() {
+        return imageSrc;
+    }
+
+    public void setImageSrc(String imageSrc) {
+        this.imageSrc = imageSrc;
     }
 
     public Long getId() {
@@ -46,7 +70,7 @@ public class Dish {
     }
 
     public void setDescr(String descr) {
-        this.Descr = descr;
+        Descr = descr;
     }
 
     public Set<DishHaveProducts> getDHPs() {
