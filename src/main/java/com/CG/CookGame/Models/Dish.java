@@ -18,9 +18,7 @@ public class Dish {
     @OneToMany(mappedBy="dish")
     private Set<Level> levels;
     @Column(unique = false,length = 65535)
-    //@Column(nullable = false,unique = false,length = 65535)
     private String wikySrc;
-    //@Column(nullable = false,unique = false,length = 65535)
     @Column(unique = false,length = 65535)
     private String imageSrc;
 
