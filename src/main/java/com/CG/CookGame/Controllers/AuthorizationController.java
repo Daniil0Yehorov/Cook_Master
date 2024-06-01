@@ -1,5 +1,6 @@
 package com.CG.CookGame.Controllers;
 
+import com.CG.CookGame.Enums.Role;
 import com.CG.CookGame.Models.*;
 import com.CG.CookGame.Repositorys.*;
 import com.CG.CookGame.Services.LevelService;
@@ -11,6 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -307,7 +310,16 @@ public class AuthorizationController {
                 new Level(9L,"З'їдавши цю страву ви можете відчути смак країни кохання, але незважаючи \n" +
                         "на свою назву, не має французького коріння. ",myasopoFranz,88),
                 new Level(10L,"Це знаменита страва із слоїв овочів та риби, що часто прикрашає святковий \n" +
-                        "стіл на новий рік.",Shuba,100)));}
+                        "стіл на новий рік.",Shuba,100)));
+        //додані адміністратори до бд, ломает бд с ключами.
+        //resolved; одноразово вставить данные про  первого админа, а далее закоментить его
+    /*User admin1= new User("Administra2","Adminbla2@",Role.ADMIN_ROLE);
+    if(admin1.getLogin().equals(userService.login(admin1.getLogin()))){
+
+    }
+    else { userService.save(admin1);}
+    */
+    }
 
     @Autowired
     private  final HttpSession session;
@@ -329,7 +341,11 @@ public class AuthorizationController {
                 return "index";
             } else {
                 session.setUser(user);
-                return "redirect:/" + user.getId();
+                if (user.getRole() == Role.ADMIN_ROLE) {
+                    return "redirect:/admin/" + user.getId();
+                } else {
+                    return "redirect:/" + user.getId();
+                }
             }
         }
         return "index";
@@ -360,6 +376,8 @@ public class AuthorizationController {
         User newUser = new User(login, password);
         userService.save(newUser);
         session.setUser(newUser);
+        //Без проверки на роль, ибо в регистрационной форме админ зарегаться не может
+        //ведь ему создаст аккаунт,другой админ
         return "redirect:/" + newUser.getId();
     }
 }
