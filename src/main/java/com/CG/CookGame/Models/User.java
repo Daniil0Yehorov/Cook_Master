@@ -21,7 +21,7 @@ public class User {
         this.password=password;
         this.userDetails = new UserDetails();
         this.userDetails.setUser(this);
-        }
+    }
 
     public Long getId() {
         return id;

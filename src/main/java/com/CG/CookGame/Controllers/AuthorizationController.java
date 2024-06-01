@@ -307,9 +307,7 @@ public class AuthorizationController {
                 new Level(9L,"З'їдавши цю страву ви можете відчути смак країни кохання, але незважаючи \n" +
                         "на свою назву, не має французького коріння. ",myasopoFranz,88),
                 new Level(10L,"Це знаменита страва із слоїв овочів та риби, що часто прикрашає святковий \n" +
-                        "стіл на новий рік.",Shuba,100)));
-
-    }
+                        "стіл на новий рік.",Shuba,100)));}
 
     @Autowired
     private  final HttpSession session;
