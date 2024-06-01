@@ -5,11 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cook Master Admin</title>
-  <link rel="stylesheet" type="text/css" th:href="@{/css/styleMain.css}"/>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/profile.css}"/>
 </head>
 <body>
 <header>
+  <!--посилання на інші сторінки-->
+  <a href="/logout" class="header-link">Вихід</a>
 </header>
+<div class="changepassword">
+  <p class="passwordtxt">Зміна паролю</p>
+  <form class="change-section" action="/changeAdminsPassword" method="post">
+    <input type="password" placeholder="Старий пароль"name="Oldpassword" id="old-password">
+    <input type="password" placeholder="Новий пароль"name="newpassword" id="new-password">
+    <button type="submit">Замінити</button>
+    <p th:if="${errorpassword}" style="background-color:red" th:text="${errorpassword}"/>
+  </form>
+</div>
 <footer>
   <p class="footer-text">Виконавці проекту:</p>
   <p class="footer-text-second">Андрій Гордієнко</p>
