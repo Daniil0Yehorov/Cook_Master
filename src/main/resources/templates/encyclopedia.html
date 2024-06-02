@@ -13,7 +13,7 @@
   <a href="/logout" class="header-link">Вихід</a>
   <img src="/images/logo.png" alt="Logo" th:src="@{/images/logo.png}">
   <a th:href="@{'/' + ${userdetails.userId} + '/Game'}" class="header-link">Перейти до гри</a>
-    <a th:href="@{'/' + ${user.id} + '/rating'}" class="header-link">Таблиця лідерів</a>
+    <a th:href="@{'/' + ${user.userId} + '/rating'}" class="header-link">Таблиця лідерів</a>
 </header>
 <main class="block" >
   <h1>Енциклопедія страв</h1>

@@ -159,7 +159,7 @@
         background-color: #0056b3;
     }
 }
-@media (min-width: 1201px) and (max-width: 1400px) {
+@media (min-width: 1201px) and (max-width: 1401px) {
     body {
         margin: 0;
         padding: 0;
@@ -316,7 +316,7 @@
         border-radius: 30px;
     }
 }
-@media (min-width: 769px) and (max-width: 1200px) {
+@media (min-width: 769px) and (max-width: 1201px) {
     body {
         margin: 0;
         padding: 0;
@@ -477,7 +477,7 @@
         background-color: #0056b3;
     }
 }
-@media (min-width: 631px) and (max-width: 768px) {
+@media (min-width: 631px) and (max-width: 769px) {
     body {
         margin: 0;
         padding: 0;
