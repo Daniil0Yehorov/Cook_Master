@@ -36,13 +36,13 @@ public class ratingController {
     @GetMapping("/{userId}/rating")
     public String rating(@PathVariable Long userId, Model model) {
         if (session.isPresent()) {
-            UserDetails currentUserD = userDetailsRepository.findByUserId(userId);
-            User currentUser = session.getUser();
+            UserDetails currentUser = userDetailsRepository.findByUserId(userId);
+            User currentUsernoD = session.getUser();
             if (currentUser == null) {
                 return "redirect:/";
             }
 
-            model.addAttribute("currentUserD", currentUserD);
+            model.addAttribute("currentUsernoD", currentUsernoD);
             model.addAttribute("currentUser", currentUser);
             // Получаем всех пользователей, отсортированных по количеству баллов
             List<UserDetails> allUsers = userDetailsRepository.findAll(Sort.by(Sort.Direction.DESC, "points"));

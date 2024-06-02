@@ -10,11 +10,11 @@
 <body>
 
 <header>
-    <a th:href="@{'/' + ${currentUserD.userId} + '/' + ${currentUser.login}}" class="header-link" th:text="${currentUser.login}">Link Text</a>
+    <a th:href="@{'/' + ${currentUser.userId} + '/' + ${currentUsernoD.login}}" class="header-link" th:text="${currentUsernoD.login}">Link Text</a>
     <a href="/logout" class="header-link">Вихід</a>
     <img src="/images/logo.png" alt="Logo" th:src="@{/images/logo.png}">
-    <a th:href="@{'/' + ${currentUserD.userId} + '/Game'}" class="header-link">Головна сторінка</a>
-    <a th:href="@{'/' + ${currentUserD.userId} + '/encyclopedia'}" class="header-link">Енциклопедія</a>
+    <a th:href="@{'/' + ${currentUser.userId} + '/Game'}" class="header-link">Головна сторінка</a>
+    <a th:href="@{'/' + ${currentUser.userId} + '/encyclopedia'}" class="header-link">Енциклопедія</a>
 </header>
 <main class="block">
     <br><br><br><br><br><br>
