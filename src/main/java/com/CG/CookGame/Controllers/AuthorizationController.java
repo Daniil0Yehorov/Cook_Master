@@ -311,14 +311,14 @@ public class AuthorizationController {
                         "на свою назву, не має французького коріння. ",myasopoFranz,88),
                 new Level(10L,"Це знаменита страва із слоїв овочів та риби, що часто прикрашає святковий \n" +
                         "стіл на новий рік.",Shuba,100)));
-        //додані адміністратори до бд, ломает бд с ключами.
-        //resolved; одноразово вставить данные про  первого админа, а далее закоментить его
-    /*User admin1= new User("Administra2","Adminbla2@",Role.ADMIN_ROLE);
-    if(admin1.getLogin().equals(userService.login(admin1.getLogin()))){
 
-    }
-    else { userService.save(admin1);}
-    */
+        String loginAdmin="Administra2";
+        User admmincheck= userService.login(loginAdmin);
+        if(admmincheck==null){
+            User admin1= new User("Administra2","Adminbla2@",Role.ADMIN_ROLE);
+            userService.save(admin1);
+        }
+        else {}
     }
 
     @Autowired
