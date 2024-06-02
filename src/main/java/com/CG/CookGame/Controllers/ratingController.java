@@ -1,9 +1,6 @@
 package com.CG.CookGame.Controllers;
 
-import com.CG.CookGame.Models.Dish;
-import com.CG.CookGame.Models.Level;
-import com.CG.CookGame.Models.UserDetails;
-import com.CG.CookGame.Models.UserReachedLevel;
+import com.CG.CookGame.Models.*;
 import com.CG.CookGame.Repositorys.DishRepository;
 import com.CG.CookGame.Repositorys.LevelRepository;
 import com.CG.CookGame.Repositorys.UserDetailsRepository;
@@ -39,13 +36,14 @@ public class ratingController {
     @GetMapping("/{userId}/rating")
     public String rating(@PathVariable Long userId, Model model) {
         if (session.isPresent()) {
-            UserDetails currentUser = userDetailsRepository.findByUserId(userId);
+            UserDetails currentUserD = userDetailsRepository.findByUserId(userId);
+            User currentUser = session.getUser();
             if (currentUser == null) {
                 return "redirect:/";
             }
 
+            model.addAttribute("currentUserD", currentUserD);
             model.addAttribute("currentUser", currentUser);
-
             // Получаем всех пользователей, отсортированных по количеству баллов
             List<UserDetails> allUsers = userDetailsRepository.findAll(Sort.by(Sort.Direction.DESC, "points"));
 
