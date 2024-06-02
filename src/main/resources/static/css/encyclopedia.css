@@ -108,7 +108,7 @@
         font-size: clamp(0.8em, 1.5vw, 1.2em);
     }
 }
-@media (min-width: 1201px) and (max-width: 1400px) {
+@media (min-width: 1201px) and (max-width: 1401px) {
     body {
         margin: 0;
         padding: 0;
@@ -218,7 +218,7 @@
         font-size: clamp(0.8em, 1.5vw, 1.2em);
     }
 }
-@media (min-width: 769px) and (max-width: 1200px) {
+@media (min-width: 769px) and (max-width: 1201px) {
     body {
         margin: 0;
         padding: 0;
@@ -326,7 +326,7 @@
         font-size: clamp(0.8em, 1.5vw, 1.2em);
     }
 }
-@media (min-width: 631px) and (max-width: 768px) {
+@media (min-width: 631px) and (max-width: 769px) {
     body {
         margin: 0;
         padding: 0;
@@ -434,7 +434,7 @@
         font-size: clamp(0.6em, 1.5vw, 0.8em);
     }
 }
-@media (max-width: 630px) {
+@media (max-width: 631px) {
     body {
         margin: 0;
         padding: 0;

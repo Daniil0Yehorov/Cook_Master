@@ -12,8 +12,10 @@
     <a th:href="@{'/' + ${user.id} + '/encyclopedia'}" class="header-link">Повернутися до енциклопедії</a></header>
 <main class="main">
     <h1 th:text="${dish.name}">Назва страви</h1>
-    <img th:src="${dish.imageSrc}" width="200" height="200" alt="Photo">
-    <a th:href="@{${dish.wikySrc}}" target="_blank"><p th:text="${dish.descr}">Опис страви</p></a>
+    <div class="content">
+        <img th:src="${dish.imageSrc}" width="200" height="200" alt="Photo">
+        <a th:href="@{${dish.wikySrc}}" target="_blank"><p th:text="${dish.descr}">Опис страви</p></a>
+    </div>
 </main>
 <footer>
     <p class="footer-text">Виконавці проекту:</p>
