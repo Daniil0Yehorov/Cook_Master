@@ -22,13 +22,37 @@ public class Dish {
     @Column(unique = false,length = 65535)
     private String imageSrc;
 
+    //@Column(unique = true,length = 65535) пока Даша не кинет видосы и т.д
+    @Column(length = 65535)
+    private String YouTubeSrc;
+    //@Column(unique = true) пока Даша не кинет видосы и т.д
+    @Column(length = 65535)
+    private String  VideoId;
     public Dish(){}
-    public Dish(Long id,String name,String Descr,String wikySrc,String imageSrc){
+    public Dish(Long id,String name,String Descr,String wikySrc,String imageSrc,String YoutubeSrc,String VideoId){
         this.id=id;
         this.name=name;
         this.Descr=Descr;
         this.wikySrc=wikySrc;
         this.imageSrc=imageSrc;
+        this.YouTubeSrc=YoutubeSrc;
+        this.VideoId=VideoId;
+    }
+
+    public String getYouTubeSrc() {
+        return YouTubeSrc;
+    }
+
+    public void setYouTubeSrc(String youTubeSrc) {
+        YouTubeSrc = youTubeSrc;
+    }
+
+    public String getVideoId() {
+        return VideoId;
+    }
+
+    public void setVideoId(String videoId) {
+        VideoId = videoId;
     }
 
     public String getWikySrc() {
