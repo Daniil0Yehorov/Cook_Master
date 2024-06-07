@@ -1,5 +1,6 @@
 package com.CG.CookGame.Controllers;
 
+import com.CG.CookGame.Enums.Role;
 import com.CG.CookGame.Models.*;
 import com.CG.CookGame.Repositorys.DishRepository;
 import com.CG.CookGame.Repositorys.LevelRepository;
@@ -45,8 +46,10 @@ public class ratingController {
             model.addAttribute("currentUsernoD", currentUsernoD);
             model.addAttribute("currentUser", currentUser);
             // Получаем всех пользователей, отсортированных по количеству баллов
-            List<UserDetails> allUsers = userDetailsRepository.findAll(Sort.by(Sort.Direction.DESC, "points"));
-
+            List<UserDetails> allUsers = userDetailsRepository.findAll(Sort.by(Sort.Direction.DESC, "points"))
+                    .stream()
+                    .filter(userDetails -> userDetails.getUser().getRole() != Role.ADMIN_ROLE)//no admins int tablerating
+                    .collect(Collectors.toList());
             List<UserDetails> topUsers = new ArrayList<>();
             for (int i = 0; i < 5 && i < allUsers.size(); i++) {
                 topUsers.add(allUsers.get(i));
