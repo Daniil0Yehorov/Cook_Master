@@ -17,16 +17,14 @@ public class Dish {
     private Set<DishHaveProducts> DHPs;
     @OneToMany(mappedBy="dish")
     private Set<Level> levels;
-    @Column(unique = false,length = 65535)
+    @Column(length = 65535)
     private String wikySrc;
-    @Column(unique = false,length = 65535)
+    @Column(length = 65535)
     private String imageSrc;
 
-    //@Column(unique = true,length = 65535) пока Даша не кинет видосы и т.д
-    @Column(length = 65535)
+    @Column(unique = true,length = 65535)
     private String YouTubeSrc;
-    //@Column(unique = true) пока Даша не кинет видосы и т.д
-    @Column(length = 65535)
+    @Column(unique = true)
     private String  VideoId;
     public Dish(){}
     public Dish(Long id,String name,String Descr,String wikySrc,String imageSrc,String YoutubeSrc,String VideoId){

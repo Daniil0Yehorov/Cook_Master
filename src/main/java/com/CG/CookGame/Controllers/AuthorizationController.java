@@ -86,7 +86,7 @@ public class AuthorizationController {
                 "з'їдали. \n" +
                 "Найбільший бутерброд у світі завдовжки 720 метрів було виготовлено мешканцями \n" +
                 "ліванського села Кфар Катра. ","https://uk.wikipedia.org/wiki/%D0%91%D1%83%D1%82%D0%B5%D1%80%D0%B1%D1%80%D0%BE%D0%B4#:~:text=%D0%91%D1%83%D1%82%D0%B5%D1%80%D0%B1%D1%80%D0%BE%CC%81%D0%B4%20(%D0%B2%D1%96%D0%B4%20%D0%BD%D1%96%D0%BC.,%D1%8F%D0%BA%D1%83%20%D0%BF%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4%D0%B5%D0%BD%D1%96%20%D0%B4%D0%BE%D0%B4%D0%B0%D1%82%D0%BA%D0%BE%D0%B2%D1%96%20%D1%85%D0%B0%D1%80%D1%87%D0%BE%D0%B2%D1%96%20%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D0%B8.",
-                "/images/1buter.png","https://www.youtube.com/watch?v=X6p1frY8XoU&ab_channel=%D0%A2%D0%B5%D0%BB%D0%B5%D0%BA%D0%B0%D0%BD%D0%B0%D0%BBICTV","X6p1frY8XoU");
+                "/images/1buter.png","https://www.youtube.com/watch?v=ZeGOwUtekH0","ZeGOwUtekH0");
         Dish Golubci = new Dish(2L,"Голубці","Рецепт: \n" +
                 "Відваріть капусту до м’якості листків. Приправте фарш сіллю та перцем. На кожен лист \n" +
                 "капусти викладіть порцію фаршу і загорніть у форму конверта. Укладіть голубці в \n" +
@@ -101,7 +101,7 @@ public class AuthorizationController {
                 "варіації у кожній культурі. Наприклад, у Польщі вони відомі як “гоłbki”, що буквально \n" +
                 "перекладається як “маленькі голуби”. Ця назва, можливо, походить від форми страви, що \n" +
                 "нагадує гніздо з птахами. ","https://uk.wikipedia.org/wiki/%D0%93%D0%BE%D0%BB%D1%83%D0%B1%D1%86%D1%96",
-                "/images/2Golubci.png","","");
+                "/images/2Golubci.png","https://www.youtube.com/watch?v=-4Yjho6nK00&ab_channel=%D0%93%D0%BE%D1%82%D1%83%D1%94%D0%BC%D0%BE%D1%81%D1%82%D1%80%D0%B0%D0%B2%D0%B8%D0%B7%D0%A8%D0%B5%D1%84%D0%BA%D1%83%D1%85%D0%B0%D1%80%D0%B5%D0%BC","-4Yjho6nK00");
         Dish Naggetsi = new Dish(3L,"Нагетси","Рецепт: \n" +
                 "Наріжте курячу грудку на невеликі шматочки. В одній мисці висипте муку, в іншій збийте \n" +
                 "яйце, а в третій покладіть панірувальні сухарі. Посоліть і поперчіть шматочки курячої \n" +
@@ -118,7 +118,7 @@ public class AuthorizationController {
                 "всередині, вони стали улюбленою закускою багатьох. \n" +
                 "Назва \"наггет\" походить від англійського слова \"nugget\", що перекладається як \"золотий \n" +
                 "самородок\". Ця назва відображає форму страви, що нагадує золоті зливки. ","https://en.wikipedia.org/wiki/Chicken_McNuggets",
-                "/images/3Naggetsi.png","","");
+                "/images/3Naggetsi.png","https://www.youtube.com/watch?v=3JqybGTd-y0&ab_channel=YevhenKlopotenko","3JqybGTd-y0");
         Dish Hachap= new Dish(4L,"Хачапурі","Рецепт: \n" +
                 "Розкачайте тісто у великий круглий пласт. Натріть сир на тертці. Викладіть сирну начинку \n" +
                 "на середину тіста, залишаючи вільними краї приблизно 2-3 см. Загорніть краї тіста до \n" +
@@ -133,7 +133,7 @@ public class AuthorizationController {
                 "рецептом. Деякі грузини додавали додаткові інгредієнти або змінювали форму хачапурі - \n" +
                 "від квадратного конверта до великого кола та човна. Тому на даний момент відомо \n" +
                 "щонайменше десять різновидів цієї страви. ","https://uk.wikipedia.org/wiki/%D0%A5%D0%B0%D1%87%D0%B0%D0%BF%D1%83%D1%80%D1%96",
-                "/images/4Hachap.png","","");
+                "/images/4Hachap.png","https://www.youtube.com/watch?v=ydPFPM9IFVg&ab_channel=YevhenKlopotenko","ydPFPM9IFVg");
         Dish Margarit = new Dish(5L,"Маргарита","Рецепт: \n" +
                 "Розігрійте духовку до 250°C. Розкачайте тісто на злегка посипаній борошном поверхні до \n" +
                 "бажаної товщини. Перенесіть тісто на деко для піци або на пергаментний папір. \n" +
@@ -148,7 +148,7 @@ public class AuthorizationController {
                 "зелений (базилик) і білий (моцарелла). Однак пізніші дослідження поставили під сумнів \n" +
                 "цю історію, засумнівавшись у справжності листа, який нібито було написано королевою, і \n" +
                 "вказали, що історія та назва “Маргарита” вперше прозвучали у 1930-1940-х роках.","https://uk.wikipedia.org/wiki/%D0%9F%D1%96%D1%86%D0%B0_%D0%9C%D0%B0%D1%80%D0%B3%D0%B0%D1%80%D0%B8%D1%82%D0%B0#:~:text=%D0%9F%D1%96%D1%86%D0%B0%20%C2%AB%D0%9C%D0%B0%D1%80%D0%B3%D0%B0%D1%80%D0%B8%D1%82%D0%B0%C2%BB%20%E2%80%94%20%D1%86%D0%B5%20%D1%82%D0%B8%D0%BF%D0%BE%D0%B2%D0%B0,%D0%B1%D0%B0%D0%B7%D0%B8%D0%BB%D1%96%D0%BA%D0%BE%D0%BC%2C%20%D1%81%D1%96%D0%BB%D0%BB%D1%8E%20%D1%82%D0%B0%20%D0%BE%D0%BB%D0%B8%D0%B2%D0%BA%D0%BE%D0%B2%D0%BE%D1%8E%20%D0%BE%D0%BB%D1%96%D1%94%D1%8E.",
-                "/images/5Margarit.png","","");
+                "/images/5Margarit.png","https://www.youtube.com/watch?v=74YrZeiaugE&ab_channel=%D0%A1%D0%BD%D1%96%D0%B4%D0%B0%D0%BD%D0%BE%D0%BA%D0%B71%2B1","74YrZeiaugE");
         Dish Peperoni = new Dish(6L,"Пепероні","Рецепт: \n" +
                 "Розігрійте духовку до 250°C. Розкачайте тісто на злегка посипаній борошном поверхні до \n" +
                 "бажаної товщини. Перенесіть тісто на деко для піци або на пергаментний папір. \n" +
@@ -163,7 +163,7 @@ public class AuthorizationController {
                 "швидко стала популярною серед місцевих та туристів. Її популярність поширилася, і піца \n" +
                 "пепероні стала однією з найулюбленіших та найвідоміших піц у всьому світі, \n" +
                 "завойовуючи смаки гурманів у кожному куточку земної кулі. ","https://uk.wikipedia.org/wiki/%D0%9F%D0%B5%D0%BF%D0%B5%D1%80%D0%BE%D0%BD%D1%96#:~:text=%D0%9F%D0%B5%D0%BF%D0%B5%D1%80%D0%BE%D0%BD%D1%96%20%E2%80%94%20%D0%B3%D0%BE%D1%81%D1%82%D1%80%D0%B8%D0%B9%20%D1%80%D1%96%D0%B7%D0%BD%D0%BE%D0%B2%D0%B8%D0%B4%20%D1%81%D0%B0%D0%BB%D1%8F%D0%BC%D1%96%20%D0%B2,%D1%80%D0%B5%D1%86%D0%B5%D0%BF%D1%82%20%D0%B7%D0%B3%D1%96%D0%B4%D0%BD%D0%BE%20%D0%B7%20%D0%BC%D1%96%D1%81%D1%86%D0%B5%D0%B2%D0%B8%D0%BC%D0%B8%20%D1%80%D0%B5%D0%B0%D0%BB%D1%96%D1%8F%D0%BC%D0%B8.",
-                "/images/6Peperoni.png","","");
+                "/images/6Peperoni.png","https://www.youtube.com/watch?v=_AmP3M4Fxuk&ab_channel=UkraineKitchen","_AmP3M4Fxuk");
         Dish Philadelp = new Dish(7L,"Філадельфія","Рецепт: \n" +
                 "Відваріть рис. Змішайте рис з рисовим оцтом, цукром та сіллю. Дайте йому охолонути. \n" +
                 "Наріжте огірок на тонкі смужки. Розріжте червону рибу на тонкі смужки або кубики. \n" +
@@ -183,7 +183,7 @@ public class AuthorizationController {
                 "Популярність ролу Філадельфія вплинула навіть на виробництво крем-сиру. Компанія \n" +
                 "\"Philadelphia\", яка виробляє відомий крем-сир, зауважила значне зростання попиту на свій \n" +
                 "продукт завдяки популярності цього роллу. \n","https://en.wikipedia.org/wiki/Philadelphia_roll",
-                "/images/7Philadel.png","","");
+                "/images/7Philadel.png","https://www.youtube.com/watch?v=fcLzNVU_Ack&t=89s&ab_channel=NadiaHope","fcLzNVU_Ack");
         Dish Kaliphorn = new Dish(8L,"Каліфорнія","Рецепт: \n" +
                 "Покладіть норі на бамбукову підставку для суші. Розташуйте рис на норі, залишаючи \n" +
                 "невеликий проміжок по краях. Наріжте авокадо на тонкі смужки та розташуйте на рисі. \n" +
@@ -198,7 +198,7 @@ public class AuthorizationController {
                 "символом американської адаптації японської кухні. Ролл “Каліфорнія” часто \n" +
                 "використовується як вступ до світу суші для тих, хто вперше пробує цю страву, завдяки \n" +
                 "своєму м’якому смаку та відсутності сирої риби. ","https://en.wikipedia.org/wiki/California_roll",
-                "/images/8Kaliphorn.png","","");
+                "/images/8Kaliphorn.png","https://www.youtube.com/watch?v=If0uN9P2EoQ&ab_channel=%D0%A1%D0%BC%D0%B0%D0%BA%D0%BE%D0%BB%D0%B8%D0%BA.%D1%8E%D0%B0%D0%9C%D0%B0%D1%80%D1%96%D1%8F%D0%9C%D0%B8%D1%85%D0%B0%D0%BB%D1%8C%D1%87%D0%B5%D0%BD%D0%BA%D0%BE","If0uN9P2EoQ");
         Dish myasopoFranz = new Dish(9L,"М'ясо по французьки","Рецепт: \n" +
                 "Наріжте м’ясо на порційні шматки та відбийте їх до тонкості близько 1 см. Посоліть і \n" +
                 "поперчіть м’ясо з обох боків. Наріжте цибулю кільцями або півкільцями. Наріжте \n" +
@@ -214,7 +214,7 @@ public class AuthorizationController {
                 "аналогів з такою назвою. Це створює кумедні ситуації, коли французькі гості намагаються \n" +
                 "пояснити, що вони ніколи не їли \"Mouton à la française\" (буквальний переклад \"М'яса по\n" +
                 "французьки\") у себе на батьківщині. ","https://uk.wikipedia.org/wiki/%D0%9C%27%D1%8F%D1%81%D0%BE_%D0%BF%D0%BE-%D1%84%D1%80%D0%B0%D0%BD%D1%86%D1%83%D0%B7%D1%8C%D0%BA%D0%B8#:~:text=%D0%9C'%D1%8F%D1%81%D0%BE%20%D0%BF%D0%BE%2D%D1%84%D1%80%D0%B0%D0%BD%D1%86%D1%83%D0%B7%D1%8C%D0%BA%D0%B8%20(,%D1%8F%D0%BB%D0%BE%D0%B2%D0%B8%D1%87%D0%B8%D0%BD%D0%B0)%2C%20%D0%BA%D0%B0%D1%80%D1%82%D0%BE%D0%BF%D0%BB%D1%96%20%D1%82%D0%B0%20%D1%81%D0%B8%D1%80%D1%83.",
-                "/images/9myaso.png","","");
+                "/images/9myaso.png","https://www.youtube.com/watch?v=ZrUFyyJeV9I&ab_channel=YevhenKlopotenko","ZrUFyyJeV9I");
         Dish Shuba = new Dish(10L,"Шуба","Рецепт: \n" +
                 "Відваріть картоплю, моркву, буряк та яйця до готовності. Очистіть овочі та яйця, а потім \n" +
                 "натріть їх на крупній тертці. Наріжте оселедець на дрібні шматочки. Наріжте цибулю \n" +
@@ -229,7 +229,7 @@ public class AuthorizationController {
                 "Назва \"ШУБА\" — це абревіатура, що означає \"Шовінізму та Упадку — Бойкот і \n" +
                 "Анафема\". Таким чином, цей салат не лише став популярним святковим блюдом, але й \n" +
                 "мав символічне значення, виражаючи протест проти політичних настроїв того часу.","https://uk.wikipedia.org/wiki/%D0%9E%D1%81%D0%B5%D0%BB%D0%B5%D0%B4%D0%B5%D1%86%D1%8C_%D0%BF%D1%96%D0%B4_%D1%88%D1%83%D0%B1%D0%BE%D1%8E#:~:text=%D0%9E%D1%81%D0%B5%D0%BB%D0%B5%D0%B4%D0%B5%D1%86%D1%8C%20%D0%BF%D1%96%D0%B4%20%D1%88%D1%83%D0%B1%D0%BE%D1%8E%20(%D1%87%D0%B0%D1%81%D1%82%D0%BE%20%C2%AB%D1%88%D1%83%D0%B1%D0%B0,%2C%20%D0%BE%D0%B2%D0%BE%D1%87%D1%96%D0%B2%2C%20%D1%8F%D1%94%D1%86%D1%8C%20%D1%96%20%D0%BC%D0%B0%D0%B9%D0%BE%D0%BD%D0%B5%D0%B7%D1%83",
-                "/images/10Shuba.png","","");
+                "/images/10Shuba.png","https://www.youtube.com/watch?v=6jXmjfGLoBQ&ab_channel=%D0%9A%D0%A3%D0%A5%D0%9D%D0%AF%D0%97%D0%9A%D0%98%D0%A8%D0%95%D0%9D%D0%86%26%D0%A1%D0%9F%D0%A0%D0%90%D0%92%D0%98%D0%94%D0%9E%D0%9C%D0%90%D0%A8%D0%9D%D0%86.%28%D0%A9%D0%B0%D1%81%D1%82%D1%8F%D0%96%D0%98%D0%A2%D0%98%29.","6jXmjfGLoBQ");
         dishRepository.saveAll(Arrays.asList(
                 buter, Golubci, Naggetsi, Hachap, Margarit, Peperoni,
                 Philadelp, Kaliphorn, myasopoFranz, Shuba
