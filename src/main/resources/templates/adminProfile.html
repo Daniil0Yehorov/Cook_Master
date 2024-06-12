@@ -9,8 +9,11 @@
 </head>
 <body>
 <header>
-  <!--посилання на інші сторінки-->
   <a href="/logout" class="header-link">Вихід</a>
+  <a href="/dishAdd" class="header-link">Додавання страв</a>
+  <a th:href="@{'/admin/' + ${user.id} + '/addProduct'}" class="header-link">Додати новий продукт</a>
+  <a th:href="@{'/admin/' + ${user.id} + '/addLevel'}" class="header-link">Додати новий левел</a>
+  <a th:href="@{'/admin/' + ${user.id} + '/addAdmin'}" class="header-link">Додати нового адміна</a>
 </header>
 <div class="changepassword">
   <p class="passwordtxt">Зміна паролю</p>

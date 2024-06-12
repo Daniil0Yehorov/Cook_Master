@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Створення страви</title>
+</head>
+<header>
+  <a href="/logout" class="header-link">Вихід</a>
+  <a th:href="@{/admin/{userId}(userId=${user.id})}" class="header-link" th:text="${user.login}"/>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/dishAdd.css}"/>
+  </header>
+<body>
+<main class="main">
+  <h1>Створення страви</h1>
+  <form th:action="@{/dishAdd/save}" method="post" enctype="multipart/form-data" class="form">
+    <div class="form-group">
+      <label  th:for="name">Назва страви</label>
+      <input type="text" name="name" placeholder="Назва страви. Приклад: Борщ" required class="form-control">
+    </div>
+    <div class="form-group">
+      <label  th:for="descr">Опис страви</label>
+      <textarea name="descr" placeholder="Опис страви" required class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+      <label  th:for="image">Фото страви</label>
+      <input type="file" name="image" accept="image/*" class="form-control-file" required>
+    </div>
+    <div class="form-group">
+      <label  th:for="wikySrc">Посилання на енциклопедію</label>
+      <input type="url" name="wikySrc" placeholder="https://example.com" required class="form-control">
+    </div>
+    <div class="form-group">
+      <label  th:for="YouTubeSrc">Посилання на YouTube</label>
+      <input type="url" name="YouTubeSrc" placeholder="https://www.youtube.com/watch?v=example" required class="form-control">
+    </div>
+    <div class="form-group">
+      <label th:for="products">Вибір продуктів та їх послідовність</label>
+      <ul id="product-list" class="list-group">
+        <li th:each="product : ${products}" class="list-group-item">
+          <input type="checkbox" name="products" th:value="${product.id}"> <span th:text="${product.name}"></span>
+          <input type="number" name="subsequences" placeholder="Послідовність" min="1" class="form-control mt-2">
+        </li>
+      </ul>
+    </div>
+    <button type="submit" class="btn btn-primary">Підтвердити</button>
+  </form>
+  <p th:if="${error}" style="background-color:red" th:text="${error}"/>
+</main>
+<footer>
+  <p class="footer-text">Виконавці проекту:</p>
+  <p class="footer-text-second">Андрій Гордієнко</p>
+  <p class="footer-text-second">Дар'я Дем'яненко</p>
+  <p class="footer-text-second">Даніїл Єгоров</p>
+  <p class="footer-text-second">Анастасія Жорняк</p>
+  <p class="footer-text-second">Алина Стульбо</p>
+</footer>
+</body>
+</html>
