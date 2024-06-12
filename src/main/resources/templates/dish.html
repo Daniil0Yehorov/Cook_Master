@@ -16,6 +16,14 @@
         <img th:src="${dish.imageSrc}" width="200" height="200" alt="Photo">
         <a th:href="@{${dish.wikySrc}}" target="_blank"><p th:text="${dish.descr}">Опис страви</p></a>
     </div>
+    <div class="video-section">
+        <h2>Відео рецепту</h2>
+        <a th:href="@{${dish.YouTubeSrc}}" target="_blank">Дивитися відео на YouTube</a>
+        <!-- Встроенное видео -->
+        <div class="embed-responsive embed-responsive-16by9 my-3">
+            <iframe th:src="@{'https://www.youtube.com/embed/' + ${dish.VideoId}}" class="embed-responsive-item" allowfullscreen/>
+        </div>
+    </div>
 </main>
 <footer>
     <p class="footer-text">Виконавці проекту:</p>

@@ -1,5 +1,6 @@
 package com.CG.CookGame.Services;
 
+import com.CG.CookGame.Enums.Role;
 import com.CG.CookGame.Models.User;
 import com.CG.CookGame.Models.UserDetails;
 import com.CG.CookGame.Repositorys.UserDetailsRepository;
@@ -30,7 +31,14 @@ public class UserService {
         existingUser.setPassword(user.getPassword());
         return repository.save(existingUser);
     }
+    public void addAdmin(String login, String password) {
+        if (repository.existsByLogin(login)) {
+            throw new IllegalArgumentException("Користувач вже існує");
+        }
 
+        User user = new User(login, password, Role.ADMIN_ROLE);
+        repository.save(user);
+    }
 }
 
 
