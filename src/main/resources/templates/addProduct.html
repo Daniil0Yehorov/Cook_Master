@@ -9,14 +9,8 @@
 </head>
 <body>
 <header>
-  <!--посилання на інші сторінки-->
   <a href="/logout" class="header-link">Вихід</a>
-  <a th:href="@{'/admin/' + ${adminId}}" class="header-link">Профіль Адміністратора</a>
-  <a th:href="@{'/admin/' + ${user.id} + '/addLevel'}" class="header-link">Додати новий левел</a>
-  <a th:href="@{'/admin/' + ${user.id} + '/addAdmin'}" class="header-link">Додати нового адміна</a>
-
-
-
+  <a th:href="@{'/admin/' + ${adminId}}" class="header-link" th:text="${user.login}"/>
 </header>
 <div class="container mt-5">
   <div class="row">

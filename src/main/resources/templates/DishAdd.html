@@ -7,7 +7,7 @@
 </head>
 <header>
   <a href="/logout" class="header-link">Вихід</a>
-  <a th:href="@{/admin/{userId}(userId=${user.id})}" class="header-link" th:text="${user.login}"/>
+ <a th:href="@{/admin/{userId}(userId=${user.id})}" class="header-link" th:text="${user.login}"/>
   <link rel="stylesheet" type="text/css" th:href="@{/css/dishAdd.css}"/>
   </header>
 <body>

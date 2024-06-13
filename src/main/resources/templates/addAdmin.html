@@ -10,10 +10,7 @@
 <body>
 <header>
   <a href="/logout" class="header-link">Вихід</a>
-  <a th:href="@{'/admin/' + ${adminId}}" class="header-link">Профіль Адміністратора</a>
-  <a th:href="@{'/admin/' + ${user.id} + '/addProduct'}" class="header-link">Додати новий продукт</a>
-  <a th:href="@{'/admin/' + ${user.id} + '/addLevel'}" class="header-link">Додати новий левел</a>
-
+  <a th:href="@{'/admin/' + ${adminId}}" class="header-link" th:text="${user.login}"/>
 </header><div class="container mt-5">
   <div class="row">
     <div class="col-md-6">
