@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Kurale&display=swap');
+@media (min-width: 1401px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Kurale";
+        background-color: #aec0eb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    header {
+        height: 10vh;
+        width: 100%;
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+    }
+    .header-link {
+        color: white;
+        text-decoration: none;
+        margin: 0 20px;
+        font-size: 1.2em;
+        align-self: center;
+        margin: 0 6%;
+    }
+    .main {
+        display: flex;
+        justify-content: space-around;
+    }
+    h1 {
+        text-align: center;
+    }
+    .sidebar {
+        text-align: center; /* Выравниваем текст по центру */
+    }
+    .list-group {
+        max-height: 250px;
+        overflow-y: auto;
+    }
+    .list-group-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border: none;
+        margin-bottom: 4px;
+    }
+    footer {
+        height: 10vh;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+        color: #fff;
+    }
+    .footer-text {
+        text-align: center;
+        margin: 0;
+        font-size: clamp(0.8em, 1.5vw, 1.2em);
+        margin-top: 1.5vh;
+    }
+    .footer-text-second {
+        flex-grow: 1;
+        display: inline-block;
+        text-align: center;
+        margin: 30px;
+        font-size: 1.2em;
+        margin-top: 0.5vh;
+        font-size: clamp(0.8em, 1.5vw, 1.2em);
+    }
+}
+@media (min-width: 1201px) and (max-width: 1401px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Kurale";
+        background-color: #aec0eb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    header {
+        height: 10vh;
+        width: 100%;
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+    }
+    .header-link {
+        color: white;
+        text-decoration: none;
+        margin: 0 20px;
+        font-size: 1.2em;
+        align-self: center;
+        margin: 0 6%;
+    }
+    .main {
+        display: flex;
+        justify-content: space-around;
+    }
+    h1 {
+        text-align: center;
+    }
+    .sidebar {
+        text-align: center; /* Выравниваем текст по центру */
+    }
+    .list-group {
+        max-height: 250px;
+        overflow-y: auto;
+    }
+    .list-group-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border: none;
+        margin-bottom: 4px;
+    }
+    footer {
+        height: 10vh;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+        color: #fff;
+    }
+    .footer-text {
+        text-align: center;
+        margin: 0;
+        font-size: clamp(0.8em, 1.5vw, 1.2em);
+        margin-top: 1.5vh;
+    }
+    .footer-text-second {
+        flex-grow: 1;
+        display: inline-block;
+        text-align: center;
+        margin: 30px;
+        font-size: 1.2em;
+        margin-top: 0.5vh;
+        font-size: clamp(0.8em, 1.5vw, 1.2em);
+    }
+}
+@media (min-width: 768px) and (max-width: 1201px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Kurale";
+        background-color: #aec0eb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    header {
+        height: 10vh;
+        width: 100%;
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+    }
+    .header-link {
+        color: white;
+        text-decoration: none;
+        margin: 0 20px;
+        font-size: 1.2em;
+        align-self: center;
+        margin: 0 6%;
+    }
+    .main {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    h1 {
+        text-align: center;
+    }
+    .sidebar {
+        text-align: center; /* Выравниваем текст по центру */
+    }
+    .main {
+        display: flex;
+        justify-content: space-around;
+    }
+    .list-group {
+        max-height: 250px;
+        overflow-y: auto;
+    }
+    .list-group-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border: none;
+        margin-bottom: 4px;
+    }
+    footer {
+        height: 10vh;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+        color: #fff;
+    }
+    .footer-text {
+        text-align: center;
+        margin: 0;
+        font-size: clamp(0.8em, 1.5vw, 1.2em);
+        margin-top: 1.5vh;
+    }
+    .footer-text-second {
+        flex-grow: 1;
+        display: inline-block;
+        text-align: center;
+        margin: 10px;
+        font-size: 1.2em;
+        margin-top: 0.5vh;
+        font-size: clamp(0.8em, 1.5vw, 1.2em);
+    }
+}
+@media (min-width: 631px) and (max-width: 767px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Kurale";
+        background-color: #aec0eb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    header {
+        height: 10vh;
+        width: 100%;
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+    }
+    .header-link {
+        color: white;
+        text-decoration: none;
+        margin: 0 20px;
+        font-size: 1em;
+        align-self: center;
+        margin: 0 6%;
+    }
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+    h1 {
+        text-align: center;
+    }
+    .sidebar {
+        text-align: center;
+    }
+    .list-group {
+        max-height: 150px;
+        overflow-y: auto;
+    }
+    .list-group-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border: none;
+        margin-bottom: 4px;
+    }
+    footer {
+        height: 10vh;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+        color: #fff;
+    }
+    .footer-text {
+        text-align: center;
+        margin: 0;
+        font-size: clamp(0.6em, 1.5vw, 0.8em);
+        margin-top: 0.5vh;
+    }
+    .footer-text-second {
+        flex-grow: 1;
+        display: inline-block;
+        text-align: center;
+        margin: 2px;
+        font-size: 1.2em;
+        margin-top: 0.5vh;
+        font-size: clamp(0.6em, 1.5vw, 0.8em);
+    }
+}
+@media (max-width: 631px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Kurale";
+        background-color: #aec0eb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    header {
+        height: 10vh;
+        width: 100%;
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+    }
+    .header-link {
+        color: white;
+        text-decoration: none;
+        margin: 0 20px;
+        font-size: 1em;
+        align-self: center;
+        margin: 0 6%;
+    }
+    .main {
+        display: flex;
+        flex-direction: column;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    h1 {
+        text-align: center;
+    }
+    .sidebar {
+        text-align: center;
+    }
+    .list-group {
+        max-height: 150px;
+        overflow-y: auto;
+    }
+    .list-group-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border: none;
+        margin-bottom: 4px;
+    }
+    footer {
+        height: 10vh;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+        color: #fff;
+    }
+    .footer-text {
+        text-align: center;
+        margin: 0;
+        font-size: clamp(0.6em, 1.5vw, 0.8em);
+        margin-top: 0.5vh;
+    }
+    .footer-text-second {
+        flex-grow: 1;
+        display: inline-block;
+        text-align: center;
+        margin: 2px;
+        font-size: 1.2em;
+        margin-top: 0.5vh;
+        font-size: clamp(0.6em, 1.5vw, 0.8em);
+    }
+}

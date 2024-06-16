@@ -27,51 +27,47 @@
         font-size: 1.2em;
         align-self: center;
     }
-    .container {
-        margin-top: 12vh; /* Adjusted to avoid header overlap */
+    .changepassword {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
-
-    h2 {
-        color: #333;
+    .passwordtxt {
+        background-color: #8197c9;
+        padding: 20px 30px;
+        border-radius: 50%;
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+        text-align: center;
         margin-bottom: 20px;
     }
-
-    .form-group label {
-        font-size: 1.2em;
-        color: #333;
+    .change-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+        background-color: #999999;
+        border-radius: 30px;
+        padding: 20px;
     }
-
-    .form-control {
-        border-radius: 5px;
-        padding: 8px;
-        border: 2px solid #af82ed;
-        font-size: 1em;
+    .change-section input[type="text"], .change-section input[type="password"], .change-section input[type="email"] {
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 30px;
+        width: 100%;
     }
-
-    .form-control:hover {
-        border-color: #7747ba;
-    }
-
-    .btn-primary {
-        background-color: #af82ed;
+    .change-section button {
+        padding: 10px;
+        margin-bottom: 40px;
         border: none;
-        color: #000;
-        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
         cursor: pointer;
+        border-radius: 30px;
     }
-    .btn-primary:hover {
-        background-color: #7747ba;
-    }
-
-    .list-group-item {
-        background-color: rgba(255, 255, 255, 0.5);
-        border: none;
-        margin-bottom: 10px;
-    }
-    .list-group{
-        max-height: 300px; /* Adjust the height as needed */
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch; /* For smooth scrolling on touch devices */
+    .change-section button:hover {
+        background-color: #0056b3;
     }
     footer {
         height: 10vh;
@@ -127,53 +123,19 @@
         font-size: 1.2em;
         align-self: center;
     }
-    .container {
-        margin-top: 12vh; /* Adjusted to avoid header overlap */
+    .changepassword {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
-
-    h2 {
-        color: #333;
+    .passwordtxt {
+        background-color: #8197c9;
+        padding: 20px 30px;
+        border-radius: 50%;
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+        text-align: center;
         margin-bottom: 20px;
-    }
-
-    .form-group label {
-        font-size: 1.2em;
-        color: #333;
-    }
-
-    .form-control {
-        border-radius: 5px;
-        padding: 8px;
-        border: 2px solid #af82ed;
-        font-size: 1em;
-    }
-
-    .form-control:hover {
-        border-color: #7747ba;
-    }
-
-    .btn-primary {
-        background-color: #af82ed;
-        border: none;
-        color: #000;
-        padding: 10px 20px;
-        cursor: pointer;
-    }
-
-    .btn-primary:hover {
-        background-color: #7747ba;
-    }
-
-    .list-group-item {
-        background-color: rgba(255, 255, 255, 0.5);
-        border: none;
-        margin-bottom: 10px;
-
-    }
-    .list-group{
-        max-height: 300px; /* Adjust the height as needed */
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch; /* For smooth scrolling on touch devices */
     }
     footer {
         height: 10vh;
@@ -199,6 +161,32 @@
         font-size: 1.2em;
         margin-top: 0.5vh;
         font-size: clamp(0.8em, 1.5vw, 1.2em);
+    }
+    .change-section {
+        display: flex;
+        flex-direction: column; /* Вертикальное расположение элементов */
+        align-items: center; /* Выравниваем элементы по центру */
+        box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+        background-color: #999999;
+        border-radius: 30px;
+        padding: 20px;
+    }
+    .change-section input[type="text"], .change-section input[type="password"], .change-section input[type="email"] {
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 30px;
+        width: 100%;
+
+    }
+    .change-section button {
+        padding: 10px;
+        margin-bottom: 40px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        border-radius: 30px;
     }
 }
 @media (min-width: 769px) and (max-width: 1201px) {
@@ -229,42 +217,19 @@
         font-size: 1.2em;
         align-self: center;
     }
-    h2 {
-        color: #333;
+    .changepassword {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .passwordtxt {
+        background-color: #8197c9;
+        padding: 20px 30px;
+        border-radius: 50%;
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+        text-align: center;
         margin-bottom: 20px;
-    }
-    .form-group label {
-        font-size: 1.2em;
-        color: #333;
-    }
-    .form-control {
-        border-radius: 5px;
-        padding: 8px;
-        border: 2px solid #af82ed;
-        font-size: 1em;
-    }
-    .form-control:hover {
-        border-color: #7747ba;
-    }
-    .btn-primary {
-        background-color: #af82ed;
-        border: none;
-        color: #000;
-        padding: 10px 20px;
-        cursor: pointer;
-    }
-    .btn-primary:hover {
-        background-color: #7747ba;
-    }
-    .list-group-item {
-        background-color: rgba(255, 255, 255, 0.5);
-        border: none;
-        margin-bottom: 10px;
-    }
-    .list-group{
-        max-height: 300px; /* Adjust the height as needed */
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch; /* For smooth scrolling on touch devices */
     }
     footer {
         height: 10vh;
@@ -290,6 +255,35 @@
         font-size: 1.2em;
         margin-top: 0.5vh;
         font-size: clamp(0.8em, 1.5vw, 1.2em);
+    }
+    .change-section {
+        display: flex;
+        flex-direction: column; /* Вертикальное расположение элементов */
+        align-items: center; /* Выравниваем элементы по центру */
+        box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+        background-color: #999999;
+        border-radius: 30px;
+        padding: 20px;
+    }
+    .change-section input[type="text"], .change-section input[type="password"], .change-section input[type="email"] {
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 30px;
+        width: 100%;
+
+    }
+    .change-section button {
+        padding: 10px;
+        margin-bottom: 40px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        border-radius: 30px;
+    }
+    .change-section button:hover {
+        background-color: #0056b3;
     }
 }
 @media (min-width: 631px) and (max-width: 769px) {
@@ -320,47 +314,19 @@
         font-size: 1em;
         align-self: center;
     }
-    .add-product-header {
-        margin-top: 15vh;
+    .changepassword {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
-    h2 {
-
-        color: #333;
+    .passwordtxt {
+        background-color: #8197c9;
+        padding: 20px 30px;
+        border-radius: 50%;
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+        text-align: center;
         margin-bottom: 20px;
-    }
-    .form-group label {
-        font-size: 1.2em;
-        color: #333;
-    }
-    .form-control {
-        border-radius: 5px;
-        padding: 8px;
-        border: 2px solid #af82ed;
-        font-size: 1em;
-    }
-    .form-control:hover {
-        border-color: #7747ba;
-    }
-    .btn-primary {
-        background-color: #af82ed;
-        border: none;
-        color: #000;
-        padding: 10px 20px;
-        cursor: pointer;
-    }
-    .btn-primary:hover {
-        background-color: #7747ba;
-    }
-    .list-group-item {
-        background-color: rgba(255, 255, 255, 0.5);
-        border: none;
-        margin-bottom:10px;
-    }
-    .list-group{
-        max-height: 300px; /* Adjust the height as needed */
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch; /* For smooth scrolling on touch devices */
-        margin-bottom:15vh;
     }
     footer {
         height: 10vh;
@@ -386,6 +352,35 @@
         font-size: 1.2em;
         margin-top: 0.5vh;
         font-size: clamp(0.6em, 1.5vw, 0.8em);
+    }
+    .change-section {
+        display: flex;
+        flex-direction: column; /* Вертикальное расположение элементов */
+        align-items: center; /* Выравниваем элементы по центру */
+        box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+        background-color: #999999;
+        border-radius: 30px;
+        padding: 20px;
+    }
+    .change-section input[type="text"], .change-section input[type="password"], .change-section input[type="email"] {
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 30px;
+        width: 100%;
+
+    }
+    .change-section button {
+        padding: 10px;
+        margin-bottom: 40px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        border-radius: 30px;
+    }
+    .change-section button:hover {
+        background-color: #0056b3;
     }
 }
 @media (max-width: 631px) {
@@ -416,46 +411,19 @@
         font-size: 0.6em;
         align-self: center;
     }
-    .add-product-header {
-        margin-top: 15vh;
+    .changepassword {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
-    h2 {
-        color: #333;
+    .passwordtxt {
+        background-color: #8197c9;
+        padding: 20px 30px;
+        border-radius: 50%;
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+        text-align: center;
         margin-bottom: 20px;
-    }
-    .form-group label {
-        font-size: 1.2em;
-        color: #333;
-    }
-    .form-control {
-        border-radius: 5px;
-        padding: 8px;
-        border: 2px solid #af82ed;
-        font-size: 1em;
-    }
-    .form-control:hover {
-        border-color: #7747ba;
-    }
-    .btn-primary {
-        background-color: #af82ed;
-        border: none;
-        color: #000;
-        padding: 10px 20px;
-        cursor: pointer;
-    }
-    .btn-primary:hover {
-        background-color: #7747ba;
-    }
-    .list-group-item {
-        background-color: rgba(255, 255, 255, 0.5);
-        border: none;
-        margin-bottom: 10px;
-    }
-    .list-group{
-        max-height: 300px;
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
-        margin-bottom:15vh;
     }
     footer {
         height: 10vh;
@@ -481,5 +449,34 @@
         font-size: 1.2em;
         margin-top: 0.5vh;
         font-size: clamp(0.6em, 1.5vw, 0.8em);
+    }
+    .change-section {
+        display: flex;
+        flex-direction: column; /* Вертикальное расположение элементов */
+        align-items: center; /* Выравниваем элементы по центру */
+        box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+        background-color: #999999;
+        border-radius: 30px;
+        padding: 20px;
+    }
+    .change-section input[type="text"], .change-section input[type="password"], .change-section input[type="email"] {
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 30px;
+        width: 100%;
+
+    }
+    .change-section button {
+        padding: 10px;
+        margin-bottom: 40px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        border-radius: 30px;
+    }
+    .change-section button:hover {
+        background-color: #0056b3;
     }
 }

@@ -12,41 +12,47 @@
   <a href="/logout" class="header-link">Вихід</a>
   <a th:href="@{'/admin/' + ${adminId}}" class="header-link" th:text="${user.login}"/>
 </header>
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-md-6">
-      <h2>Додати Рівень</h2>
-      <form th:action="@{/admin/{id}/addLevel(id=${adminId})}" method="post">
-        <div class="form-group">
-          <label for="PointsPerLevel">Бали за проходження:</label>
-          <input type="number" class="form-control" id="PointsPerLevel" name="PointsPerLevel" required>
-        </div>
-        <div class="form-group">
-          <label for="hint">Підказка:</label>
-          <input type="text" class="form-control" id="hint" name="hint" required>
-        </div>
-        <div class="form-group">
-          <label for="dish">Страва:</label>
-          <select class="form-control" id="dish" name="dishId">
-            <option th:each="dish : ${dishes}" th:value="${dish.id}" th:text="${dish.name}">Назва страви</option>
-          </select>
-        </div>
-        <button type="submit" class="btn btn-primary mt-3">Додати Рівень</button>
-      </form>
-      <div th:if="${success}" class="alert alert-danger mt-3" role="alert">
-        <p th:text="${success}"></p>
+<div class="main-content">
+  <div class="container">
+    <h2>Додати Рівень</h2>
+    <form th:action="@{/admin/{id}/addLevel(id=${adminId})}" method="post">
+      <div class="form-group">
+        <label for="PointsPerLevel">Бали за проходження:</label>
+        <input type="number" class="form-control" id="PointsPerLevel" name="PointsPerLevel" required>
       </div>
-      <div th:if="${error}" class="alert alert-danger mt-3" role="alert">
-        <p th:text="${error}"></p>
+      <div class="form-group">
+        <label for="hint">Підказка:</label>
+        <input type="text" class="form-control" id="hint" name="hint" required>
       </div>
+      <div class="form-group">
+        <label for="dish">Страва:</label>
+        <select class="form-control" id="dish" name="dishId">
+          <option th:each="dish : ${dishes}" th:value="${dish.id}" th:text="${dish.name}">Назва страви</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary mt-3">Додати Рівень</button>
+    </form>
+    <div th:if="${success}" class="alert alert-danger mt-3" role="alert">
+      <p th:text="${success}"></p>
     </div>
-    <div class="col-md-6">
-      <h2>Страви без рівня</h2>
-      <ul class="list-group">
-        <li class="list-group-item" th:each="dish : ${dishes}" th:text="${dish.name}">Назва страви</li>
-      </ul>
+    <div th:if="${error}" class="alert alert-danger mt-3" role="alert">
+      <p th:text="${error}"></p>
     </div>
   </div>
+  <div class="col-md-6">
+    <h2>Страви без рівня</h2>
+    <ul class="list-group scrollable-list">
+      <li class="list-group-item" th:each="dish : ${dishes}" th:text="${dish.name}">Назва страви</li>
+    </ul>
+  </div>
 </div>
+<footer>
+  <p class="footer-text">Виконавці проекту:</p>
+  <p class="footer-text-second">Андрій Гордієнко</p>
+  <p class="footer-text-second">Дар'я Дем'яненко</p>
+  <p class="footer-text-second">Даніїл Єгоров</p>
+  <p class="footer-text-second">Анастасія Жорняк</p>
+  <p class="footer-text-second">Аліна Стульбо</p>
+</footer>
 </body>
 </html>
