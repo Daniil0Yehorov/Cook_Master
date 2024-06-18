@@ -15,14 +15,11 @@ public class ImageController {
 
     @GetMapping("/images/{imageName}")
     public ResponseEntity<byte[]> getImage(@PathVariable String imageName) throws IOException {
-        // Загрузка изображения из ресурсов
         Path path = Paths.get("src/main/resources/static/images/" + imageName);
         byte[] imageBytes = Files.readAllBytes(path);
 
-        // Определение MIME типа изображения
         String contentType = imageName.endsWith(".png") ? MediaType.IMAGE_PNG_VALUE : MediaType.IMAGE_JPEG_VALUE;
 
-        // Возврат ответа с изображением
         return ResponseEntity.ok().contentType(MediaType.parseMediaType(contentType)).body(imageBytes);
     }
 }
