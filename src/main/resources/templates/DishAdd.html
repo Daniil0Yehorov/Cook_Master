@@ -11,10 +11,10 @@
   <a href="/logout" class="header-link">Вихід</a>
   <a th:href="@{/admin/{userId}(userId=${user.id})}" class="header-link" th:text="${user.login}"></a>
 </header>
+<form th:action="@{/dishAdd/save}" method="post" enctype="multipart/form-data" class="form">
 <main class="main">
   <div class="content">
     <h1>Створення страви</h1>
-    <form th:action="@{/dishAdd/save}" method="post" enctype="multipart/form-data" class="form">
       <div class="form-group">
         <label th:for="name">Назва страви</label>
         <input type="text" name="name" placeholder="Назва страви. Приклад: Борщ" required class="form-control">
@@ -36,7 +36,7 @@
         <input type="url" name="YouTubeSrc" placeholder="https://www.youtube.com/watch?v=example" required class="form-control">
       </div>
       <button type="submit" class="btn btn-primary">Підтвердити</button>
-    </form>
+
     <p th:if="${error}" style="background-color:red" th:text="${error}"></p>
   </div>
   <div class="sidebar">
@@ -51,6 +51,7 @@
     </div>
   </div>
 </main>
+</form>
 <footer>
   <p class="footer-text">Виконавці проекту:</p>
   <p class="footer-text-second">Андрій Гордієнко</p>
