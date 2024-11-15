@@ -2,7 +2,6 @@ package com.CG.CookGame.Controllers;
 
 import com.CG.CookGame.Enums.Role;
 import com.CG.CookGame.Models.User;
-import com.CG.CookGame.Models.UserDetails;
 import com.CG.CookGame.Services.UserService;
 import com.CG.CookGame.Services.ValidationService;
 import com.CG.CookGame.bean.HttpSession;

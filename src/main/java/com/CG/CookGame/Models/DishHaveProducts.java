@@ -2,8 +2,6 @@ package com.CG.CookGame.Models;
 
 import jakarta.persistence.*;
 
-import java.util.Set;
-
 @Entity
 public class DishHaveProducts {
 

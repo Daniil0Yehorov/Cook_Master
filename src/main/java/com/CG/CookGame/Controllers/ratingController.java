@@ -1,7 +1,8 @@
 package com.CG.CookGame.Controllers;
 
+import com.CG.CookGame.Models.User;
+import com.CG.CookGame.Models.UserDetails;
 import com.CG.CookGame.Enums.Role;
-import com.CG.CookGame.Models.*;
 import com.CG.CookGame.Repositorys.DishRepository;
 import com.CG.CookGame.Repositorys.LevelRepository;
 import com.CG.CookGame.Repositorys.UserDetailsRepository;
@@ -16,8 +17,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
-import java.util.OptionalLong;
 import java.util.stream.Collectors;
 
 @Controller

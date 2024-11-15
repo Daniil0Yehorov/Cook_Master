@@ -1,5 +1,6 @@
 package com.CG.CookGame.Controllers;
 
+import com.CG.CookGame.Enums.*;
 import com.CG.CookGame.Models.*;
 import com.CG.CookGame.Repositorys.*;
 import com.CG.CookGame.bean.HttpSession;

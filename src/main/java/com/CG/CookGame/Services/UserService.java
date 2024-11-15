@@ -1,9 +1,6 @@
 package com.CG.CookGame.Services;
 
-import com.CG.CookGame.Enums.Role;
 import com.CG.CookGame.Models.User;
-import com.CG.CookGame.Models.UserDetails;
-import com.CG.CookGame.Repositorys.UserDetailsRepository;
 import com.CG.CookGame.Repositorys.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
